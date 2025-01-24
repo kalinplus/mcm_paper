@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 21:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 22:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -748,7 +748,7 @@ l.65 \newpage
               [1]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <14.4> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 78.
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 110.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 97.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
@@ -760,13 +760,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 167.
- (d:/texlive/2024/texmf-dist/tex/latex/txfonts/t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 170.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -775,15 +768,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 165.
+ (d:/texlive/2024/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 168.
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 190.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 190.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 188.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 188.
 (d:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) (./code/mcmthesis-matlab1.m)
+) (./code/mcmthesis-matlab1.m
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -791,11 +791,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4] (./code/mcmthesis-sudoku.cpp
+[4]) (./code/mcmthesis-sudoku.cpp
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 25.
  (d:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -803,13 +803,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5]
+[5])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 202.
+(Font)              scaled to size 13.67995pt on input line 200.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 202.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 200.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 13.67995pt on input line 202.
+(Font)              scaled to size 13.67995pt on input line 200.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -818,7 +826,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6
+[7
 
 ]
 
@@ -828,7 +836,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7] (./mcmthesis-demo.aux)
+[8] (./mcmthesis-demo.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -837,18 +845,18 @@ Package rerunfilecheck Info: File `mcmthesis-demo.out' has not changed.
 (rerunfilecheck)             Checksum: D1DA954275506813DA0350CA6DB81F2A;2445.
  ) 
 Here is how much of TeX's memory you used:
- 17118 strings out of 474116
- 254634 string characters out of 5747717
- 2075190 words of memory out of 5000000
- 38980 multiletter control sequences out of 15000+600000
- 634266 words of font info for 180 fonts, out of 8000000 for 9000
+ 17116 strings out of 474116
+ 254618 string characters out of 5747717
+ 2107190 words of memory out of 5000000
+ 38979 multiletter control sequences out of 15000+600000
+ 632313 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,99p,551b,2042s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mcmthesis-demo.pdf (8 pages, 125270 bytes).
+ 90i,13n,99p,551b,2760s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on mcmthesis-demo.pdf (9 pages, 116520 bytes).
 PDF statistics:
  316 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
- 106 named destinations out of 1000 (max. 500000)
+ 276 compressed objects within 3 object streams
+ 107 named destinations out of 1000 (max. 500000)
  137 words of extra memory for PDF output out of 10000 (max. 10000000)
 

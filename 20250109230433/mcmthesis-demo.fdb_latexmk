@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1737724594.83062 "mcmthesis-demo.tex" "mcmthesis-demo.pdf" "mcmthesis-demo" 1737724597.45733 0
+["pdflatex"] 1737729610.38165 "mcmthesis-demo.tex" "mcmthesis-demo.pdf" "mcmthesis-demo" 1737729613.10324 0
   "code/mcmthesis-matlab1.m" 1705758320 196 85a5d87496a269d2df36a0b391613a70 ""
   "code/mcmthesis-sudoku.cpp" 1705758310 803 cb8f82253709812666ea53da8a3171fe ""
   "d:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1737547978 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -40,7 +40,6 @@
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtcxr.tfm" 1737550849 1368 7af309acf53bb727783600185f629f47 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxb.tfm" 1737550849 1020 c53143d3e3747b5c1149bd9a5ecd7b55 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxbss.tfm" 1737550849 952 8af6d4411025237a8a19c5fe76c48519 ""
-  "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxi.tfm" 1737550849 1048 a97cff5f6b833b712079817ce7a40d4c ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm" 1737550849 1056 e2202af076e43d03fc17f87e104021b0 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxphvb.tfm" 1737550849 4548 1ffa7e4f8cec4f54428bd6e887feff07 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxphvr.tfm" 1737550849 4748 767b775b8de19d97ba9256ce2b48e057 ""
@@ -51,7 +50,6 @@
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxss.tfm" 1737550849 952 9553fec7f8724dea5f23bcd5d8725907 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xb.tfm" 1737550849 6892 772bf8e6c154137db8568fa8a47a6ceb ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xbss.tfm" 1737550849 6700 9f7ab5807b4ea0f94f86ef51654456a0 ""
-  "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xi.tfm" 1737550850 6956 cab20301c4a0fe2075f774c8a2433c5d ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xr.tfm" 1737550850 6716 6d25a377562601272906e3bfe6b2817a ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xss.tfm" 1737550850 7096 d4068737d849c31bd955cec162cc9c1f ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm" 1737550850 1384 8943063000d26272532f74ca134dfecd ""
@@ -68,7 +66,6 @@
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/txsyc.tfm" 1737550850 1084 75e807e9e71f7a312e4e1187dce5e93b ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb" 1737550850 14606 238072bd1ce11e3dff8451a5a2608194 ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb" 1737550850 6330 bdd610a36762742dd8a518bf9f97b968 ""
-  "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb" 1737550850 6787 30821c47455d94d84f9e6f5bfecd086a ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb" 1737550850 13806 49b888f4605a088e66b9eb4fee320a6e ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb" 1737550850 6339 e2b78706efdc360ee6aec9b6e20211a7 ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb" 1737550850 26301 f08b3c26ea42c3177a262c2ac37d6a91 ""
@@ -85,7 +82,6 @@
   "d:/texlive/2024/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf" 1737547753 2184 8475af1b9cfa983db5f46f5ed4b8f9f7 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xb.vf" 1737550850 2144 bab2875eda5b2344ea7b1db74ccc03a4 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xbss.vf" 1737550850 2140 53a6b204134ca23b688a5eb135473f18 ""
-  "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xi.vf" 1737550850 2120 35084608d79b6b13dd746dfcffe98243 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xr.vf" 1737550850 2140 99e5b3a34695df6221a167ffa8b498d6 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xss.vf" 1737550850 2140 1f9dbe1be7b322ce3d2dc5796a8e88ed ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/tcxr.vf" 1737550850 988 4f41b8c123e4537adb7f2dbb638d2981 ""
@@ -210,10 +206,10 @@
   "d:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1737551330 5513072 e74750128a020857593cbdf8ab887bd3 ""
   "d:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1737551732 8221475 f981b11a345d462a632fc22892e95efb ""
   "d:/texlive/2024/texmf.cnf" 1737551294 713 e69b156964470283e0530f5060668171 ""
-  "mcmthesis-demo.aux" 1737724597 2692 2b4b786671474b9ab476a52066be4bf3 "pdflatex"
-  "mcmthesis-demo.out" 1737724597 2445 d1da954275506813da0350ca6db81f2a "pdflatex"
-  "mcmthesis-demo.tex" 1737724593 10797 c6be7191b49258a4a8ed472740994eff ""
-  "mcmthesis-demo.toc" 1737724597 1303 fe94346b639a169dfdcbc0c57ddf606f "pdflatex"
+  "mcmthesis-demo.aux" 1737729612 2692 8a0d96757ad0c84727f672f6be11fa8c "pdflatex"
+  "mcmthesis-demo.out" 1737729612 2445 d1da954275506813da0350ca6db81f2a "pdflatex"
+  "mcmthesis-demo.tex" 1737729609 11456 93fdc3a84b5c424c05b6e97fd05df729 ""
+  "mcmthesis-demo.toc" 1737729612 1303 fe94346b639a169dfdcbc0c57ddf606f "pdflatex"
   "mcmthesis.cls" 1736400480 12219 03270c2014b8b71a7d0ff1d7066b092b ""
   (generated)
   "mcmthesis-demo.aux"
