@@ -10,9 +10,12 @@
 
 ## 官方网站
 Overleaf网址：https://www.overleaf.com
+
 Overleaf上的Grammarly使用说明：https://www.overleaf.com/learn/how-to/Use_Grammarly_with_Overleaf
 
 ## 参考资料
 手写识别latex符号：http://detexify.kirelabs.org/classify.html
+
 样例和教程：https://www.latexstudio.net
+
 速查表：https://quickref.me/latex
