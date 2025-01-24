@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  24 JAN 2025 16:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -751,7 +751,7 @@ LaTeX Font Info:    Font shape `T1/txr/b/n' in size <14.4> not available
 <example-image-a.pdf, id=104, 321.2pt x 240.9pt>
 File: example-image-a.pdf Graphic file (type pdf)
 <use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf  used on input line 111.
+Package pdftex.def Info: example-image-a.pdf  used on input line 114.
 (pdftex.def)             Requested size: 227.62204pt x 170.72038pt.
 
 
@@ -770,7 +770,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 167.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 170.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
@@ -782,12 +782,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 189.
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 192.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 192.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 195.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -797,12 +797,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 212.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 212.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 215.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 215.
 (d:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) (./code/mcmthesis-matlab1.m) (./code/mcmthesis-sudoku.cpp
@@ -827,11 +827,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 224.
+(Font)              scaled to size 13.67995pt on input line 227.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 224.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 227.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 13.67995pt on input line 224.
+(Font)              scaled to size 13.67995pt on input line 227.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
