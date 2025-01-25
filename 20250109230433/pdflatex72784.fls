@@ -1,0 +1,5 @@
+PWD g:/contest/meimo/mcm_paper/20250109230433
+INPUT d:/texlive/2024/texmf.cnf
+INPUT d:/texlive/2024/texmf-dist/web2c/texmf.cnf
+INPUT d:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT mcmthesis-demo.tex

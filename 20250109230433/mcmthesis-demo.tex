@@ -41,6 +41,8 @@
 \usepackage{indentfirst}  %首行缩进，注释掉，首行就不再缩进。
 \usepackage{lipsum}
 \usepackage{hyperref}
+\usepackage{threeparttable}
+% \usepackage{romannum}
 \title{The title of Problem B (To be revised)}
 \author{\small \href{https://www.latexstudio.net/}
   {\includegraphics[width=7cm]{mcmthesis-logo}}}
@@ -124,7 +126,7 @@ Considering the background information and restricted conditions identified in t
 
   \item \textbf{Assumption2:} Juneau will remain relatively stable, with no drastic environmental changes or social unrest.
   \item \textbf{Justification2:} A stable natural and social environment provides a predictable framework within which we can build model and make decisions. 
-  It is important to note that this assumption does not neglect the potential impact of predictable envirmental and social change.
+  It is important to note that this assumption does not neglect the potential impact of predictable environmental and social change.
   
   \item \textbf{Assumption3:} The tourists and locals are are rational decision-makers aiming to maximize their own utility and possessing complete logical reasoning abilities.% 因为用了博弈论模型，加上理性人假设
   \item \textbf{Justification3:} This assumption is well-grounded in economic theory. Tourists typically make travel decisions based on cost-benefit analyses\cite{crouch2004determinants}, 
@@ -135,26 +137,37 @@ Considering the background information and restricted conditions identified in t
 \begin{table}[H]
   \caption{\textbf{Notations}}
   \centering
-  \begin{tabular}{ccc}
-    \toprule
-      Symbol & Definition & Unit \\
-    \midrule
-      $V$ & annual number of tourists & million \\ 
-      $C_{v}$ & annual carbon emissions per tourist & ton/person \\
-      $W_v$ & annual water consumption per tourist & $m^3$/person \\
-      $F_v$ & annual amount of waste produced per tourist & tons/person \\
-      $R_v$ & income from every tourist's comsumption annually & \$/person \\
-      $T_h$ & hotel tax rate & \% \\
-      $T_v$ & tourist fees & \$/person \\
-      $G_r$ & rate of retreat of glaciers & meter/year \\
-      $E$ & comprehensive indicators of environmental quality & / \\
-      $F$ & annual amount of waste generated & ton/year \\
-      $K$ & infrastructure capital & / \\
-      \bottomrule
-  \end{tabular}
+  \begin{threeparttable}
+    \begin{tabular}{ccc}
+      \toprule
+        Symbol\tnote{1} & Definition & Unit \\
+      \midrule
+        $V_t$ & number of tourists & million \\ 
+        $C_t$ & carbon emissions per tourist & ton/person \\
+        $F_t$ & amount of waste produced per tourist & tons/person \\
+
+        $T_p$ & net income from tourism & billion\$ \\
+        $T_h$ & hotel tax rate & \% \\
+        $T_v$ & tourist fees & \$/person \\
+
+        $E_t$ & comprehensive indicators of environmental quality(0-100) & / \\
+        $G_t$ & rate of retreat of glaciers & meter/year \\
+
+        $S_t$ & the score of social stability(0-10) & / \\ 
+        $K_t$ & investment in infrastructure & / \\
+
+        $M_t$ & extent of melting of glaciers & / \\
+        $E_G$ & investment in environment protection of scenery spots & billion\$/year \\
+        \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+    \footnotesize
+      \item[1] The symbols with subscript t represent the indicators of year t.
+    \end{tablenotes}
+  \end{threeparttable}
 \end{table}
 
-\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game}
+\section{Data Preparation}
 \subsection{Data Collection}
 \begin{table}[H]
   \caption{\textbf{Data Websites}} 
@@ -171,8 +184,114 @@ Considering the background information and restricted conditions identified in t
     \bottomrule
   \end{tabular}
 \end{table}
+
 \subsection{Data Preprocessing}
 
+\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game (DMSTM)}
+% The overall structure of the model is shown in Fig.X. 需要架构图
+We take the effect of the number of tourist $V_t$, the quality of environment $E_t$, 
+the retreat of glaciers $G_t$, the stability of society $S$ into consideration , 
+and build a game theory based model, DMSTM, to achieve the multi-objective optimization.
+DMSTM aims to maxmize the net income from toruism while minizing the carbon footprint,
+garbage generating and glacial recession, as well as keep the pressure on infrastructure within some limits,
+to provide better decision-making advice.
+In order to develop this model, we first need to calibrate the parameters to estimate 
+the independent variables $V_t, E_t, G_t, S$ mentioned above.
+
+\subsection{Parameters Calibration}
+
+\subsubsection{The Number of Tourist}
+The number of tourist is affected by many factors, such as the number of tourist in the last few years, 
+the quality of environment, the construction of infrastructure... To predict the chagne of number of tourist,
+we use multiple linear regression method
+
+\begin{equation}
+  \frac{\Delta V_t}{V_t} = \alpha\cdot\left(\frac{E_t}{E_t+\theta_{E_t}}+\frac{K_t}{K_t+\theta_{K_t}}\right) - \beta\cdot(T_h+T_v) - \gamma\cdot(C_t+F_t) - \lambda\cdot M_t
+\end{equation}
+
+\begin{equation}
+  \Delta V_t = V_{t+1} - V_t
+\end{equation}
+
+where $\alpha, \beta, \gamma, \lambda$ are the parameters to fit, and they represent 
+the coefficient of the environment and infrastructure attraction, the coefficient of the tax and expense restraint,
+negative feedback coefficient of environmental pressure and the sensitivity coefficient of glacier melting, respectively.
+While $\theta_E$ and $\theta_K$ are the saturation thresholds of environmental quality and infrastructure investment.
+
+\subsubsection{The Environmental Quality}
+The Environmental quality is impacted negatively by the carbon footprint, waste emissions, glacial retreating, and 
+positively by the environmental quality in the past and the investment in environment protection. With this
+insight, we build a dynamic equation to predict the environmental quality
+
+\begin{equation}
+  E_{t+1} = E_t + r_E \cdot E_t \left(1 - \frac{E}{E_{\text{max}}}\right) - \gamma_C \cdot C_t - \gamma_F \cdot F_t - \gamma_G \cdot G_t + \eta \cdot E_G
+\end{equation}
+
+where $r_E$ is the rate of self-healing of the environment, while $\gamma_C, \gamma_F, \gamma_G$ are the coefficient of 
+environmental damage caused by carbon emissions, waste generating and glacial retreat. $\eta$ is the restoration efficiency of 
+environmental protection investment, and $E_{max} = 100$ is the upper limit of environmental quality.
+
+Given the complexity of this equation, we use nonlinear least squares method to fit the parameters with 
+a reasonable restraint that all parameters are positive.
+
+% In order to describe our process of fitting the parameters to predict the environmental quality more clearly,
+% we draw the flowchart Figure X below
+
+\subsubsection{Glacial Retreat}
+In our model, the rate of glacial retreat is determined by this rate in the past, the carbon emissions and the number of visitors.
+So we construct a linear model
+
+\begin{equation}
+  G_t = A \cdot C_t + \mu \cdot V_t + G_0
+\end{equation}
+
+and use linear regression to fit the parameters. The intercept $G_0$ is fitted as the value in reference paper, 
+while $A$ and $\mu$ are the parameters to learn.
+
+\subsubsection{Social Stability}
+We create a score between 0 and 10 to evaluate the social stability, whose basis is mainly from 
+the historical social stability score, the amount of tourists, the environmental quality and the extend of glacial retreat.
+Therefore, we construct a regression model with constraint
+
+\begin{equation}
+  S_t = max\left(0, S_{\text{base}} - \alpha_{v_t} \cdot V_t + \alpha_{E_t} \cdot E_t - \alpha_{M_t} \cdot M_t\right)
+\end{equation}
+
+where $S_{\text{base}}$ is a benchmark score, while $\alpha_{v_t}, \alpha_{E_t}, \alpha_{M_t}$ are the parameters to fit 
+with elastic network regression.
+
+\subsection{Multi-Objective Optimization}
+In multi-objective optimization problem, there are a number of conflicting objective functions. In this case, 
+single objective optimization usually can't meet all the requirements, so we need to introduce multi-objective 
+optimization method to find a set of compromise solutions to make balance between different goals.
+
+Specialize to this problem, we build a tripartite game based dynamic management model, DMSTM, in which 
+we regard the tourists, the locals and the government as rational actors,
+and consider several goals, including the net income from tourism, the amount of carbon footprint, 
+the amount of waste produced and the rate of glacial retreat. 
+
+Due to the interrelation and potential conflict of the objectives, we use the weight coefficients $w_1, w_2, w_3$ to reflect 
+the importance of each objective to the overall strategy. The final objective function can be represented as 
+
+\begin{equation}
+  \text{Max }(w_1 \cdot T_p - w_2 \cdot (C_t + F_t + G_t) - w_3 \cdot K_{I,t})
+\end{equation}
+
+where $K_{I,t}=\frac{K_t}{K_{\text{max}}}$ represent the pressure on infrastructure.
+
+Additionally, we add the constraints that $E_t \geq 30$ and $V_t \leq 2.0$ to ensure that
+while pursuing the maximizing of tourism income, the social well-being and ecological Sustainability
+are guaranteed to some extend.
+
+As for the solution method, we use NSGA-\uppercase\expandafter{\romannumeral2} algorithm to find
+\emph{Pareto Front}, provide a set of choice of strategies for the decision makers to give consideration to
+both economic benefits and social weal as well as environmental protection.
+% 可能需要添加算法求解流程图
+
+%TODO
+\subsection{Demonstration of Model Results}
+%TODO
+\subsection{Sensitivity Analysis}
 \section{The Model Results}
 
 \section{Validating the Model}
