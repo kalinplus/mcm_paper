@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  25 JAN 2025 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  25 JAN 2025 19:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -596,46 +596,46 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_a_int=\count320
 \l__lipsum_b_int=\count321
  (d:/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-LaTeX Font Info:    Trying to load font information for T1+txr on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+txr on input line 48.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/t1txr.fd
 File: t1txr.fd 2000/12/15 v3.1
 ) (./mcmthesis-demo.aux)
 \openout1 = `mcmthesis-demo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 47.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 47.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 48.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 48.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 48.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 48.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 47.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 48.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 48.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 \c@lstlisting=\count322
  (d:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -685,26 +685,26 @@ LaTeX Font Info:    ... okay on input line 47.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 47.
+Package hyperref Info: Link coloring OFF on input line 48.
 (./mcmthesis-demo.out) (./mcmthesis-demo.out)
 \@outlinefile=\write4
 \openout4 = `mcmthesis-demo.out'.
 
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <12> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 64.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <17.28> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 64.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 65.
  [1
 
 {d:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for T1+txss on input line 66.
+LaTeX Font Info:    Trying to load font information for T1+txss on input line 67.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/t1txss.fd
 File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <17.28> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 66.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 67.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 16.41594pt on input line 66.
+(Font)              scaled to size 16.41594pt on input line 67.
  (./mcmthesis-demo.toc
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/ot1txr.fd
@@ -738,7 +738,7 @@ File: utxsyc.fd 2000/12/15 v3.1
 \openout5 = `mcmthesis-demo.toc'.
 
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 67.
+(Font)              scaled to size 10.40245pt on input line 68.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -751,11 +751,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \newpage
+l.68 \newpage
               [1]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <14.4> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 80.
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 99.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 81.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 100.
  (d:/texlive/2024/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
@@ -767,11 +767,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-Overfull \hbox (4.77168pt too wide) in paragraph at lines 129--131
+Overfull \hbox (4.77168pt too wide) in paragraph at lines 130--132
 \T1/txr/m/n/12 make travel de-ci-sions based on cost-benefit analyses[[]], and lo-cal res-i-dents en-gage in tourism-
  []
 
-(./mcmthesis-demo.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -783,10 +782,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.7 
-    ])
+l.174 \subsection
+                 {Data Preprocessing}] (./mcmthesis-demo.bbl)
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 191.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 207.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -795,16 +794,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.212 
+      ]
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 211.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 211.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 227.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 227.
 (d:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) (./code/mcmthesis-matlab1.m) (./code/mcmthesis-sudoku.cpp
+) (./code/mcmthesis-matlab1.m)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -812,7 +816,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5]
+[5] (./code/mcmthesis-sudoku.cpp
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 25.
  (d:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
@@ -826,11 +830,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 223.
+(Font)              scaled to size 13.67995pt on input line 239.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 223.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 239.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 13.67995pt on input line 223.
+(Font)              scaled to size 13.67995pt on input line 239.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -858,18 +862,18 @@ Package rerunfilecheck Info: File `mcmthesis-demo.out' has not changed.
 (rerunfilecheck)             Checksum: CF5BDC8DDA7C292FAA8294DD009B406D;2882.
  ) 
 Here is how much of TeX's memory you used:
- 17163 strings out of 474116
- 255451 string characters out of 5747717
- 2074190 words of memory out of 5000000
+ 17164 strings out of 474116
+ 255458 string characters out of 5747717
+ 2075190 words of memory out of 5000000
  39017 multiletter control sequences out of 15000+600000
  633665 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,99p,551b,2357s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,99p,551b,2042s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mcmthesis-demo.pdf (9 pages, 117374 bytes).
+Output written on mcmthesis-demo.pdf (9 pages, 118036 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 110 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
