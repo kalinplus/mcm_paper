@@ -36,6 +36,8 @@
   %\usepackage{palatino}
  \usepackage{txfonts}
 
+\usepackage{booktabs}
+\usepackage{float}
 \usepackage{indentfirst}  %首行缩进，注释掉，首行就不再缩进。
 \usepackage{lipsum}
 \title{The title of Problem B (To be revised)}
@@ -95,7 +97,7 @@ Therefore, how to realize the sustainability of the tourism becomes a great chal
 Considering the background information and restricted conditions identified in the problem statement, we are required to solve the following problems:
 \begin{itemize}
   \item \textbf{Problem 1: Model Development} \\
-    Develop a model to stabilize Juneau's tourism industry by optimizing income while controlling the carbon footprint. 
+    Develop a model to stabilize Juneau's tourism industry by optimizing income while controlling the carbon footprint and rate of melting of glaciers. 
     Include a sensitivity analysis to identify the most significant factors.
     
   \item \textbf{Problem 2: Revenue Allocation} \\
@@ -122,9 +124,38 @@ Considering the background information and restricted conditions identified in t
   \item \textbf{Assumption2:} Juneau will remain relatively stable, with no drastic environmental changes or social unrest.
   \item \textbf{Justification2:} A stable natural and social environment provides a predictable framework within which we can build model and make decisions. 
   It is important to note that this assumption does not neglect the potential impact of predictable envirmental and social change.
+  
+  \item \textbf{Assumption3:} The tourists and locals are are rational decision-makers aiming to maximize their own utility and possessing complete logical reasoning abilities.% 因为用了博弈论模型，加上理性人假设
+  \item \textbf{Justification3:} This assumption is well-grounded in economic theory. Tourists typically make travel decisions based on cost-benefit analyses\cite{crouch2004determinants}, 
+  and local residents engage in tourism-related activities to maximize their benefits\cite{ap1992residents}.
 \end{itemize}
 
-\section{Calculating and Simplifying the Model  }
+\section{Notations}
+\begin{table}[H]
+  \caption{\textbf{Notations}}
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+      Symbol & Definition & Unit \\
+    \midrule
+      $V$ & annual number of tourists & million \\ 
+      $C_{v}$ & annual carbon emissions per tourist & ton/person \\
+      $W_v$ & annual water consumption per tourist & $m^3$/person \\
+      $F_v$ & annual amount of waste produced per tourist & tons/person \\
+      $R_v$ & income from every tourist's comsumption annually & \$/person \\
+      $T_h$ & hotel tax rate & \% \\
+      $T_v$ & tourist fees & \$/person \\
+      $G_r$ & rate of retreat of glaciers & meter/year \\
+      $E$ & comprehensive indicators of environmental quality & / \\
+      $F$ & annual amount of waste generated & ton/year \\
+      $K$ & infrastructure capital & / \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game}
+\subsection{Data Collection}
+\subsection{Data Preprocessing}
 
 \section{The Model Results}
 
@@ -139,31 +170,23 @@ Considering the background information and restricted conditions identified in t
 \section{Strengths and weaknesses}
 
 \subsection{Strengths}
-\begin{itemize}
-\item \textbf{Applies widely}\\
-This  system can be used for many types of airplanes, and it also
-solves the interference during  the procedure of the boarding
-airplane,as described above we can get to the  optimization
-boarding time.We also know that all the service is automate.
-\item \textbf{Improve the quality of the airport service}\\
-Balancing the cost of the cost and the benefit, it will bring in
-more convenient  for airport and passengers.It also saves many
-human resources for the airline.
-\end{itemize}
 
-\subsection{How to cite?}
-bibliography cite use \cite{1,2,3}
 
-AI cite use \AIcite{AI1,AI2,AI3}
+% \subsection{How to cite?}
+% bibliography cite use \cite{1,2,3}
 
-\begin{thebibliography}{99}
-\bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
-Mathematical Society and Addison-Wesley
-Publishing Company , 1984-1986.
-\bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
-Addison-Wesley Publishing Company, 1986.
-\bibitem{3}\url{https://www.latexstudio.net/}
-\end{thebibliography}
+% AI cite use \AIcite{AI1,AI2,AI3}
+
+% \begin{thebibliography}{99}
+% \bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
+% Mathematical Society and Addison-Wesley
+% Publishing Company , 1984-1986.
+% \bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+% Addison-Wesley Publishing Company, 1986.
+% \bibitem{3}\url{https://www.latexstudio.net/}
+% \end{thebibliography}
+\bibliographystyle{unsrt}
+\bibliography{mcmthesis-demo}
 
 \begin{appendices}
 
@@ -254,7 +277,6 @@ The FFT is a widely used algorithm for computing the \textbf{Discrete Fourier Tr
 I hope this helps!
 
 \end{ReportAiUse}
-
 \end{document}
 %% 
 %% This work consists of these files mcmthesis.dtx,
