@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  26 JAN 2025 02:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  26 JAN 2025 17:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -938,7 +938,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  90i,16n,99p,551b,2359s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txex.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mcmthesis-demo.pdf (13 pages, 566066 bytes).
+Output written on mcmthesis-demo.pdf (13 pages, 566089 bytes).
 PDF statistics:
  408 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams

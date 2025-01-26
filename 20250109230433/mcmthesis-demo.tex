@@ -108,8 +108,8 @@ Therefore, how to realize the sustainability of the tourism becomes a great chal
 Considering the background information and restricted conditions identified in the problem statement, we are required to solve the following problems:
 \begin{itemize}
   \item \textbf{Problem 1: Model Development} \\
-    Develop a model to stabilize Juneau's tourism industry by optimizing income while controlling the carbon footprint and rate of melting of glaciers. 
-    Include a sensitivity analysis to identify the most significant factors.
+    Develop a model to stabilize Juneau's tourism industry by optimizing income while controlling the carbon footprint, the rate of melting of glaciers. 
+    and the social satisfaction. Include a sensitivity analysis to identify the most significant factors.
     
   \item \textbf{Problem 2: Revenue Allocation} \\
     Allocate the expenditures from additional revenue to areas such as infrastructure and environmental protection reasonably so that the social benifits are maxmized.
@@ -136,7 +136,7 @@ Considering the background information and restricted conditions identified in t
   \item \textbf{Justification2:} A stable natural and social environment provides a predictable framework within which we can build model and make decisions. 
   It is important to note that this assumption does not neglect the potential impact of predictable environmental and social change.
   
-  \item \textbf{Assumption3:} The tourists and locals are are rational decision-makers aiming to maximize their own utility and possessing complete logical reasoning abilities.% 因为用了博弈论模型，加上理性人假设
+  \item \textbf{Assumption3:} The touristsm, locals and the government are rational decision-makers aiming to maximize their own utility and possessing complete logical reasoning abilities.% 因为用了博弈论模型，加上理性人假设
   \item \textbf{Justification3:} This assumption is well-grounded in economic theory. Tourists typically make travel decisions based on cost-benefit analyses\cite{crouch2004determinants}, 
   and local residents engage in tourism-related activities to maximize their benefits\cite{ap1992residents}.
 \end{itemize}
@@ -282,7 +282,7 @@ Due to the interrelation and potential conflict of the objectives, we use the we
 the importance of each objective to the overall strategy. The final objective function can be represented as 
 
 \begin{equation}
-  \text{Max }(w_1 \cdot T_p - w_2 \cdot (C_t + F_t + G_t) - w_3 \cdot K_{I,t})
+  Max \ (w_1 \cdot T_p - w_2 \cdot (C_t + F_t + G_t) - w_3 \cdot K_{I,t})
 \end{equation}
 
 where $K_{I,t}=\frac{K_t}{K_{\text{max}}}$ represent the pressure on infrastructure.
@@ -292,7 +292,7 @@ while pursuing the maximizing of tourism income, the social well-being and ecolo
 are guaranteed to some extend.
 
 As for the solution method, we use NSGA-\uppercase\expandafter{\romannumeral2} algorithm to find
-\emph{Pareto Front}, provide a set of choice of strategies for the decision makers to give consideration to
+\emph{Pareto Front}, which provides a set of choice of strategies for the decision makers to give consideration to
 both economic benefits and social weal as well as environmental protection.
 % 可能需要添加算法求解流程图
 
