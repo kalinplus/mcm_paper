@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  26 JAN 2025 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.22)  26 JAN 2025 21:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -773,7 +773,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 ...1}Strengths and weaknesses}{8}{section.11}
+l.24 ...e {11}Evaluate of the Mode}{9}{section.11}
                                                   % [1])
 \tf@toc=\write5
 \openout5 = `mcmthesis-demo.toc'.
@@ -789,7 +789,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [2]
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <14.4> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 85.
-<figures/glaicer.jpg, id=165, 1854.93pt x 1124.2pt>
+<figures/glaicer.jpg, id=164, 1854.93pt x 1124.2pt>
 File: figures/glaicer.jpg Graphic file (type jpg)
 <use figures/glaicer.jpg>
 Package pdftex.def Info: figures/glaicer.jpg  used on input line 103.
@@ -848,7 +848,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6] (./mcmthesis-demo.bbl
+[6]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -856,27 +856,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7])
+[7] (./mcmthesis-demo.bbl
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8])
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <24.88> not available
-(Font)              Font shape `T1/txr/bx/n' tried instead on input line 334.
+(Font)              Font shape `T1/txr/bx/n' tried instead on input line 371.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
-
- []
-
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 354.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 354.
-(d:/texlive/2024/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) (./code/mcmthesis-matlab1.m) (./code/mcmthesis-sudoku.cpp
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -885,24 +876,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 25.
- (d:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-))
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[10]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 366.
+(Font)              scaled to size 13.67995pt on input line 403.
 LaTeX Font Info:    Font shape `T1/txss/b/n' in size <14.4> not available
-(Font)              Font shape `T1/txss/bx/n' tried instead on input line 366.
+(Font)              Font shape `T1/txss/bx/n' tried instead on input line 403.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
-(Font)              scaled to size 13.67995pt on input line 366.
+(Font)              scaled to size 13.67995pt on input line 403.
+
+
+LaTeX Warning: Empty `thebibliography' environment on input line 459.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -911,37 +893,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[11
+[10
 
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[12] (./mcmthesis-demo.aux)
+] (./mcmthesis-demo.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `mcmthesis-demo.out' has not changed.
-(rerunfilecheck)             Checksum: F6ECC3A9E67C0A5D0AE5B4F7C42C5D95;4487.
+(rerunfilecheck)             Checksum: 505A3CD1BF7B4282A00B75E69A82AD92;4675.
  ) 
 Here is how much of TeX's memory you used:
- 17464 strings out of 474116
- 260354 string characters out of 5747717
- 2074190 words of memory out of 5000000
- 39279 multiletter control sequences out of 15000+600000
- 643954 words of font info for 191 fonts, out of 8000000 for 9000
+ 16192 strings out of 474116
+ 246636 string characters out of 5747717
+ 1938190 words of memory out of 5000000
+ 38104 multiletter control sequences out of 15000+600000
+ 641043 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,16n,99p,551b,2359s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txex.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on mcmthesis-demo.pdf (13 pages, 566089 bytes).
+ 90i,16n,93p,551b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txex.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on mcmthesis-demo.pdf (11 pages, 534827 bytes).
 PDF statistics:
- 408 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
- 130 named destinations out of 1000 (max. 500000)
+ 299 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
  230 words of extra memory for PDF output out of 10000 (max. 10000000)
 
