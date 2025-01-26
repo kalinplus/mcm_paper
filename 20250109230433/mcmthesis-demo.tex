@@ -71,16 +71,7 @@ keyword1; keyword2
 \tableofcontents
 \newpage
 %%
-%% Generate the Memorandum, if it's needed.
-%% \memoto{\LaTeX{}studio}
-%% \memofrom{Liam Huang}
-%% \memosubject{Happy \TeX{}ing!}
-%% \memodate{\today}
-%% \memologo{\LARGE I'm pretending to be a LOGO!}
-%% \begin{memo}[Memorandum]
-%%   \lipsum[1-3]
-%% \end{memo}
-%%
+%
 \section{Introduction}
 \subsection{Problem Background}
 % 有一半多一点的优秀论文这里会放一张没什么信息量的那种图，
@@ -116,7 +107,7 @@ Considering the background information and restricted conditions identified in t
     
   \item \textbf{Problem 3: Model Adaptability} \\
     Adapt the model to other overtourism-affected tourist destinations, showing how location-specific factors influence measure importance. 
-    Use the model establisted above to promote less-visited locations for better balance.
+    Use the model established above to promote less-visited locations for better balance.
     
   \item \textbf{Problem 4: Memo to Tourist Council} \\
     Draft a one-page memo outlining predictions, the effects of various measures, and suggestions for optimizing outcomes.
@@ -298,9 +289,10 @@ are guaranteed to some extend.
 As for the solution method, we use NSGA-\uppercase\expandafter{\romannumeral2} algorithm to find
 \emph{Pareto Front}, which provides a set of choice of strategies for the decision makers to give consideration to
 both economic benefits and social weal as well as environmental protection.
-% 可能需要添加算法求解流程图
+% 需要添加算法求解流程图
 
 \section{Social Welfare Model via Sustainable Tax Feedback}
+% 需要新模型的架构图
 Though DMSTM takes the social stability as a optimization objective, it does not consider the social benefits explicitly. 
 In order to achieve the optimization goal of serving the best interest of the locals while maxmizing the tourism income 
 and preserving the environment, we extend DMSTM such that it takes the Sustainable tax distribution and dynamic feedback mechanism
@@ -335,6 +327,43 @@ of glaciers($G_t \downarrow$) and improve the environmental quality($E_t \uparro
 enhance the social stability($S_t\uparrow$) such that the current limit policy can be avoided.
 
 \subsection{Social Benefits Target}
+Base on the allocation of the tax, we propose a novel model to maxmize the social welfare:
+
+\begin{equation}
+  E_{\text{social}} = \beta_1 \ln(1+K_t) + \beta_2 \ln(1 + E_{G,t}) + \beta_3 \ln(1 + C_{D,t})
+\end{equation}
+
+where $\beta_1, \beta_2, \beta_3$ are the efficiency weight of the fields and should be setted by the decision-maker.
+With our analysis, the recommanded values are $\beta_1=0.3, \beta_2=0.4, \beta_3=0.4$
+
+While each of these three expenditures has its own rate, the overall balance is also important. After observing the 
+these three kind of expenditures of Juneau government from 2014 to 2022, we decide to introduce several 
+dynamic management rules to ensure their relative balance:
+
+\begin{equation}
+\begin{aligned}
+  & x_3\uparrow & \text{if } S_t < 5 \\
+  & x_2\uparrow & \text{if } E_t < 60  
+\end{aligned}
+\end{equation}
+
+\subsection{Multi-Objective Optimization Modification}
+After taking the social welfare into optimizing target, now the target function of extended DMSTM becomes 
+
+\begin{align}
+\left\{
+  \begin{aligned}
+    & Maximize \quad w_1 \cdot T_p - w_2 \cdot (C_t + F_t + G_t) - w_3 \cdot K_t \\ 
+    & Maximize \quad E_{\text{social}}
+  \end{aligned}
+\right.
+\end{align}
+
+Because we only add a new optimization objective, the original constraints such as $x_1+x_2+x_3=1, x_1>0,x_2>0,x_3>0$ 
+remains unchanged. And we still use NSGA-\uppercase\expandafter{\romannumeral2} algorithm to find
+\emph{Pareto Front} to balance economic, environmental, cost and social effect.
+
+\subsection{Demonstration of Extended Model Result}
 
 %TODO
 \section{Model Results and Analyses}
@@ -400,7 +429,7 @@ enhance the social stability($S_t\uparrow$) such that the current limit policy c
 
 \AImatter
 
-\begin{ReportAiUse}{9}
+% \begin{ReportAiUse}{9}
 % \bibitem{AI1}
 % Bing AI\\
 % Query1: write a sort algorithm\\
@@ -456,7 +485,41 @@ enhance the social stability($S_t\uparrow$) such that the current limit policy c
 
 % I hope this helps!
 
-\end{ReportAiUse}
+% \end{ReportAiUse}
+%% Generate the Memorandum, if it's needed.
+\memoto{The Tourist Councill of Juneau}
+\memofrom{Team \# 2525570}
+\memosubject{Urgent Actions to Balance Tourism and Glaicer Preservation}
+\memodate{\today}
+\memologo{COMAP}
+\begin{memo}[Memorandum]
+  We are Juneau sustainable tourism model developers. Base on our modelings and findings, we would like
+  to inform you our prediction, the effects of different measures and our suggestions on optimizing the outcome.
+
+  % 数据换成我们跑的
+  Juneau's glaciers are experiencing accelerated melting due to unsustainable tourism practices nowadays. 
+  Our analysis indicated that without immediate intervention, annual glacier retreat rates will increase by 15\%
+  over the next five years, severely damaging both ecological integrity and long-term tourism stability. 
+  Current visitor numbers (2,300+ daily) exceed the glacial ecosystem's carrying capacity by 35\%, directly contributing to irreversible environmental damage. 
+  Additionally, resident satisfaction scores have fallen to 4.2/10, signaling growing community opposition to unchecked tourism.
+
+  In order to change this deteriorating situation, some immediate actions must be taken:
+  \begin{enumerate}
+    \item \textbf{Implement vistor capacity controls}, restrict daily visitors to 1,500 throught a reservation system to reduce the glacial stress by 23\%.
+    \item \textbf{Launch the glacier sustainability fund}, collect the environmental tax and use over 70\% of them directly for glacier restoration.
+    \item \textbf{Strengthen community engagement} by allocating 30\% of tourism revenue to local infrastructure construction, aiming to cut $\text{CO}_\text{2}$ emission by 25\% by 2026s.
+  \end{enumerate}
+
+  Besides, for the long-term strategic plan, we also recommand deploy IoT sensors across critical glacial zones to track melt rates and implement real-time monitoring, as well as
+  developing state-of-the-art algorithm to recalibrate visitor caps dynamically based on real-time environmental data.
+
+  After adapting these measures, the annual glacial retreat should be reduced from 1.2 to 0.8 meters by 2026, while the toursim revenue can maintain above \$5.5 milllion annually with
+  low-impact tourism models, and the transparent revenue sharing will restore community trust.
+
+  As grim as the situation may be, we are confident in your decision-makings, and know that the sustainable toursim pattern will be established
+  with your rational measures.
+\end{memo}
+
 \end{document}
 %% 
 %% This work consists of these files mcmthesis.dtx,
@@ -470,3 +533,4 @@ enhance the social stability($S_t\uparrow$) such that the current limit policy c
 %%                                   mcmthesis-demo.pdf.
 %%
 %% End of file `mcmthesis-demo.tex'.
+

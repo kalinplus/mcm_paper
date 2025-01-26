@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex mcmthesis-demo"] 1737899865.00281 "mcmthesis-demo.aux" "mcmthesis-demo.bbl" "mcmthesis-demo" 1737899870.32013 0
+["bibtex mcmthesis-demo"] 1737916708.49611 "mcmthesis-demo.aux" "mcmthesis-demo.bbl" "mcmthesis-demo" 1737916729.24579 0
   "./mcmthesis-demo.bib" 1737778170 606 8ef464b34c36c46a9358db35106bf1d4 ""
   "d:/texlive/2024/texmf-dist/bibtex/bst/base/unsrt.bst" 1737547378 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "mcmthesis-demo.aux" 1737899868 4355 8f72d8cedcc56e3b68c9a45c95d4291f "pdflatex"
+  "mcmthesis-demo.aux" 1737916727 4651 c24dc4f8b44faf91d34519b0f2de1112 "pdflatex"
   (generated)
   "mcmthesis-demo.bbl"
   "mcmthesis-demo.blg"
   (rewritten before read)
-["pdflatex"] 1737899865.86019 "mcmthesis-demo.tex" "mcmthesis-demo.pdf" "mcmthesis-demo" 1737899870.32108 0
+["pdflatex"] 1737916724.66326 "mcmthesis-demo.tex" "mcmthesis-demo.pdf" "mcmthesis-demo" 1737916729.24755 0
   "d:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1737547978 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "d:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1737548286 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1737550426 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -40,6 +40,7 @@
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1737550116 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtcxr.tfm" 1737550849 1368 7af309acf53bb727783600185f629f47 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxb.tfm" 1737550849 1020 c53143d3e3747b5c1149bd9a5ecd7b55 ""
+  "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxbsc.tfm" 1737550849 1400 b701f007f0e956f3e9cbed202c7136eb ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxbss.tfm" 1737550849 952 8af6d4411025237a8a19c5fe76c48519 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxi.tfm" 1737550849 1048 a97cff5f6b833b712079817ce7a40d4c ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxmi.tfm" 1737550849 1056 e2202af076e43d03fc17f87e104021b0 ""
@@ -51,6 +52,7 @@
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxr.tfm" 1737550849 1004 c0e991f864f31f017ea4ff9e451b76d4 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/rtxss.tfm" 1737550849 952 9553fec7f8724dea5f23bcd5d8725907 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xb.tfm" 1737550849 6892 772bf8e6c154137db8568fa8a47a6ceb ""
+  "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xbsc.tfm" 1737550849 16648 e438345c2294baa792115c2df0f8afcf ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xbss.tfm" 1737550849 6700 9f7ab5807b4ea0f94f86ef51654456a0 ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xi.tfm" 1737550850 6956 cab20301c4a0fe2075f774c8a2433c5d ""
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/t1xr.tfm" 1737550850 6716 6d25a377562601272906e3bfe6b2817a ""
@@ -68,6 +70,7 @@
   "d:/texlive/2024/texmf-dist/fonts/tfm/public/txfonts/txsyc.tfm" 1737550850 1084 75e807e9e71f7a312e4e1187dce5e93b ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb" 1737550850 14606 238072bd1ce11e3dff8451a5a2608194 ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb" 1737550850 6330 bdd610a36762742dd8a518bf9f97b968 ""
+  "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxbsc.pfb" 1737550850 11557 c84f8a007764c604d3891eb707a5dc9f ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb" 1737550850 13806 49b888f4605a088e66b9eb4fee320a6e ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb" 1737550850 6339 e2b78706efdc360ee6aec9b6e20211a7 ""
   "d:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txex.pfb" 1737550850 17531 c91f2d6943f51d7c46d6b7b9cedd50ba ""
@@ -78,6 +81,7 @@
   "d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1737550717 46026 687528a208fbfc1f00832bb96cccebbb ""
   "d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1737550717 45458 504e2b06fa82109d168c7a0afb09e145 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xb.vf" 1737550850 2144 bab2875eda5b2344ea7b1db74ccc03a4 ""
+  "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xbsc.vf" 1737550850 2572 a1b0a7156ac9add75ef0b5843dfa3715 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xbss.vf" 1737550850 2140 53a6b204134ca23b688a5eb135473f18 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xi.vf" 1737550850 2120 35084608d79b6b13dd746dfcffe98243 ""
   "d:/texlive/2024/texmf-dist/fonts/vf/public/txfonts/t1xr.vf" 1737550850 2140 99e5b3a34695df6221a167ffa8b498d6 ""
@@ -206,11 +210,11 @@
   "d:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1737551732 8221475 f981b11a345d462a632fc22892e95efb ""
   "d:/texlive/2024/texmf.cnf" 1737551294 713 e69b156964470283e0530f5060668171 ""
   "figures/glaicer.jpg" 1737827638 431675 62d9d301b3d1cd9c362e2b6c096a4c2e ""
-  "mcmthesis-demo.aux" 1737899868 4355 8f72d8cedcc56e3b68c9a45c95d4291f "pdflatex"
-  "mcmthesis-demo.bbl" 1737899865 451 3e24dc114916f44cfdeb7533ead2a829 "bibtex mcmthesis-demo"
-  "mcmthesis-demo.out" 1737899868 4675 505a3cd1bf7b4282a00b75e69a82ad92 "pdflatex"
-  "mcmthesis-demo.tex" 1737899854 21957 efc3a0d44d0476c6e6bc71b17b023d61 ""
-  "mcmthesis-demo.toc" 1737899868 2354 31f277a848e24e4f3b3728827f913515 "pdflatex"
+  "mcmthesis-demo.aux" 1737916727 4651 c24dc4f8b44faf91d34519b0f2de1112 "pdflatex"
+  "mcmthesis-demo.bbl" 1737916709 451 3e24dc114916f44cfdeb7533ead2a829 "bibtex mcmthesis-demo"
+  "mcmthesis-demo.out" 1737916727 5204 fd33672dfc1b4758840197ce1c565fb1 "pdflatex"
+  "mcmthesis-demo.tex" 1737916723 25783 58a17ba38ab20a98546d27d1caeafe1a ""
+  "mcmthesis-demo.toc" 1737916727 2567 a343427a4966975f9fadb7a80aa76d0a "pdflatex"
   "mcmthesis.cls" 1736400480 12219 03270c2014b8b71a7d0ff1d7066b092b ""
   (generated)
   "mcmthesis-demo.aux"
