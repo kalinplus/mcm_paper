@@ -216,7 +216,7 @@ the independent variables $V_t, E_t, G_t, S$ mentioned above.
 
 \subsection{Parameters Calibration}
 
-\subsubsection{Tourist Volume}
+\subsubsection{The Number of Tourists}
 The number of tourist is affected by many factors, such as the number of tourist in the last few years, 
 the quality of environment, the construction of infrastructure and so on. To predict the chagne of number of tourist,
 based on previous reserach works\cite{johnston2005dynamic}, we model its differential as a multi-variables linear equation:
@@ -346,11 +346,32 @@ with only 30 to 40 million dollars in recent years, far below the ideal 100 mill
 Based on the model result and analysis, we propose these suggestions to the decision makers:
 \begin{itemize}
   \item Limit tourist volume to 1.3 million/year by limiting the number of cruises.
-  \item Maintaining the stability of existing tax rates.
-  \item Increase the government investment greatly to 0.1 billion\$/year, especially in infrastructure construction.
+  \item Maintain the stability of existing tax rates, or increase it a little.
+  \item Increase the government investment to 0.1 billion\$/year, especially in infrastructure construction.
+  But if unable to achieve this goal, increase the investment gradually is acceptable because the objective function
+  is quite stable with investment change(see next section for details).
 \end{itemize}
 
 \subsection{Sensitivity Analysis}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/sensitivity.png}
+  \caption{Impact of rate adjustments on the model}
+  \label{Fig.xxxxx}
+\end{figure}
+
+We conducted a sensitivity analysis on our DMSTM to verify its stability and find the most import factor among 
+the independent variables. Based on the optimal values founded in previous section, we adjust the relative values of 
+the cut off number of visitor, the government investment and the tax rate within a range of $-10\%$ to $10\%$
+to observe their effects to objective function. The results of this experiment conducted in Juneau indicates that 
+our model is quite stable with respect to these independent variables, as the changes of objective function are all 
+within 1.5\%. Therefore, we conclude that our model is stable and capable of addressing real-world problems.
+
+Besides, from this sensitivity analysis, we can find that our DMSTM is most sensitive to 
+the number of tourists, while much less sensitive to the government investment and tax rate.
+From this behaviour, we can infer that the most important factor is the number of tourists, 
+which has the largets impact on the indicators like tourism income, environmental quality, 
+glacial retreat speed and social stability.
 
 \section{Social Welfare Model via Sustainable Tax Feedback}
 % 需要新模型的架构图
