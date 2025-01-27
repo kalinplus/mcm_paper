@@ -45,24 +45,47 @@
 \usepackage{graphicx}
 \usepackage{subfigure}
 % \usepackage{romannum}
-\title{The title of Problem B (To be revised)}
-\author{\small \href{https://www.latexstudio.net/}}
+\title{Game Theory Based Dynamic Management Model for Sustainable Tourism}
+\author{Zekai He, Kailin Huang, Wangyang Li}
 \date{\today}
 \begin{document}
 \begin{abstract}
 \par 
-Use this template to begin typing the first page (summary page) of your electronic report. This template uses a 12-point Times New Roman font. Submit your paper as an Adobe PDF electronic file (e.g. 1111111.pdf), typed in English, with a readable font of at least 12-point type.
+The rapid growth of tourism in Juneau has brought significant economic benefits,
+but also caused serious challenges such as glacial retreat and social discontent, 
+necessitating the development of a model forsustainable tourism.
+Thus we develop a dynamic multi-objective optimization model that integrates 
+game theory to balance economic, environmental and social factors, providing
+practical solutions for sustainable tourism management in Juneau and 
+adaptable strategies for other overtourism-affected destinations.
 
-Do not include the name of your school, advisor, or team members on this or any page.
+For problem 1, we developed a game theory-based dynamic management model (DMST)
+integrating tourist volume, environmental quality, glacial retreat and social stability.
+Multi-variable linear equations were used for parameter calibration, with Differential
+Evolution(DE) employed to find optimal solution set.
+As for revenue allocation, we introduced a Socail Welfare Model that divided social spending into 
+infrastructure, environmental protection, and community development, 
+using specific allocation rates to ensure balanced benefits.
 
-Papers must be within the 25 page limit.
+Our analysis indicated that limiting tourist volume to 1.3 million/year, setting hotel tax rate
+around 9.78\% and increaseing government investment to \$0.108 billion/year will optimize 
+economic outcomes while minimizing environmental damage and maintaining social stability.
+Specifically, the sensitivity analysis shows that the tourism volume is the most important 
+factor, impacting the tourism income and environment greatly.
 
-Be sure to change the control number and problem choice above.
-You may delete these instructions as you begin to type your report here.
+For problem 2, we extended the DMST to address overtourism challenges in Franz Josef Glacier 
+to show its adaptability. To adapt the model, location-specific indicators and a tourist diversion
+mechanism are introduced, involving dividing tourist volume into main(Franz Josef Glacier) and 
+Secondary(Haast) destination with a division factor($\phi_t$). Utilizing data from 2018 to 2023, 
+including tourist numbers, greenhouse gas emissions and so on, the NSGA-\uppercase\expandafter{\romannumeral2}
+was used to find Pareto-Front solutions.
 
-(We will modify this page when this paper is almost done.)
+
+
+
+
 \begin{keywords}
-keyword1; keyword2
+sustainable tourism; multi-objective optimization; dynamic management model; tripartite game
 \end{keywords}
 \end{abstract}
 \maketitle
@@ -184,13 +207,13 @@ In order to intuitively reflect our work process, the flow chart is shown in Fig
   \end{threeparttable}
 \end{table}
 
-\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game (DMSTM)}
+\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game (DMST)}
 
 % The overall structure of the model is shown in Fig.X. 需要架构图
 We take the effect of the number of tourist $V_t$, the quality of environment $E_t$, 
 the retreat of glaciers $G_t$, the stability of society $S$ into consideration , 
-and build a game theory based model\cite{Wang2021}, DMSTM, to achieve the multi-objective optimization.
-DMSTM aims to maxmize the net income from toruism while minizing the carbon footprint,
+and build a game theory based model\cite{Wang2021}, DMST, to achieve the multi-objective optimization.
+DMST aims to maxmize the net income from toruism while minizing the carbon footprint,
 garbage generating and glacial recession, as well as keep the pressure on infrastructure within some limits,
 to provide better decision-making advice.
 In order to develop this model, we first need to calibrate the parameters to estimate 
@@ -284,7 +307,7 @@ In multi-objective optimization problem, there are a number of conflicting objec
 single objective optimization usually can't meet all the requirements, so we need to introduce multi-objective 
 optimization method to find a set of compromise solutions to make balance between different goals.
 
-Specialize to this problem, we build a tripartite game based dynamic management model, DMSTM, in which 
+Specialize to this problem, we build a tripartite game based dynamic management model, DMST, in which 
 we regard the tourists, the locals and the government as rational actors,
 and consider several goals, including the net income from tourism, the amount of carbon footprint, 
 the amount of waste produced and the rate of glacial retreat. 
@@ -336,10 +359,10 @@ The objective function space and the optimal solution set are shown in Figure 3:
   \label{Figure.XXX}
 \end{figure}
 
-From this picture, we can see the optimal point: cut off number of vistor = 1.31 million\$, tax rate = 9.78\%, goverment investment = 0.108 billion\$.
+From this picture, we can see the optimal point: cut off number of vistor = 1.31 million\$, tax rate = 9.78\%, government investment = 0.108 billion\$.
 
 Compared with the current data, the tourist volume has excceeded this limit in recent three years, and reach the peak of 1.6 million in 2023, 
-while the current tax rate is about 9\%, which is closed to the optimal value. However, the state of goverment investment on infrastructure is not encouraging,
+while the current tax rate is about 9\%, which is closed to the optimal value. However, the state of government investment on infrastructure is not encouraging,
 with only 30 to 40 million dollars in recent years, far below the ideal 100 million dollars.
 
 Based on the model result and analysis, we propose these suggestions to the decision makers:
@@ -359,14 +382,14 @@ Based on the model result and analysis, we propose these suggestions to the deci
   \label{Fig.xxxxx}
 \end{figure}
 
-We conducted a sensitivity analysis on our DMSTM to verify its stability and find the most import factor among 
+We conducted a sensitivity analysis on our DMST to verify its stability and find the most import factor among 
 the independent variables. Based on the optimal values founded in previous section, we adjust the relative values of 
 the cut off number of visitor, the government investment and the tax rate within a range of $-10\%$ to $10\%$
 to observe their effects to objective function. The results of this experiment conducted in Juneau indicates that 
 our model is quite stable with respect to these independent variables, as the changes of objective function are all 
 within 1.5\%. Therefore, we conclude that our model is stable and capable of addressing real-world problems.
 
-Besides, from this sensitivity analysis, we can find that our DMSTM is most sensitive to 
+Besides, from this sensitivity analysis, we can find that our DMST is most sensitive to 
 the number of tourists, while much less sensitive to the government investment and tax rate.
 From this behaviour, we can infer that the most important factor is the number of tourists, 
 which has the largets impact on the indicators like tourism income, environmental quality, 
@@ -374,9 +397,9 @@ glacial retreat speed and social stability.
 
 \section{Social Welfare Model via Sustainable Tax Feedback}
 % 需要新模型的架构图
-Though DMSTM takes the social stability as a optimization objective, it does not consider the social benefits explicitly. 
+Though DMST takes the social stability as a optimization objective, it does not consider the social benefits explicitly. 
 In order to achieve the optimization goal of serving the best interest of the locals while maxmizing the tourism income 
-and preserving the environment, we extend DMSTM such that it takes the Sustainable tax distribution and dynamic feedback mechanism\cite{bayer2004sterman}
+and preserving the environment, we extend DMST such that it takes the Sustainable tax distribution and dynamic feedback mechanism\cite{bayer2004sterman}
 into consideration, and regards the social benefits as a optimization objective.
 
 \subsection{Tax and Expenditure Variables}
@@ -429,7 +452,7 @@ dynamic management rules to ensure their relative balance:
 \end{equation}
 
 \subsection{Multi-Objective Optimization Modification}
-After taking the social welfare into optimizing target, now the target function of extended DMSTM becomes 
+After taking the social welfare into optimizing target, now the target function of extended DMST becomes 
 
 \begin{align}
 \left\{
@@ -444,7 +467,7 @@ Because we only add a new optimization objective, the original constraints such 
 remains unchanged. And we still use NSGA-\uppercase\expandafter{\romannumeral2} algorithm to find
 \emph{Pareto Front} to balance economic, environmental, cost and social effect.
 
-\section{Adapt Extended DMSTM to Franz Josef Glacier}
+\section{Adapt Extended DMST to Franz Josef Glacier}
 \subsection{The Situation of Overtourism in Franz Josef Glacier}
 Franz Josef Glacier, located in Westland Tai Poutini National Park on the West Coast of New Zealand's South Island, 
 is a 12-kilometer-long temperate maritime glacier. Franz Josef glacier is the one of the most publicly-accessible glaciers in New Zealand,
@@ -500,9 +523,9 @@ For these indicators, the higher the value, the greater the weight. The detailed
 \end{figure}
 
 \subsection{Dynamic Formula Design}
-Similar to the dynamic system modeled by DMSTM, we design the formulas to describe the amount of tourists, 
+Similar to the dynamic system modeled by DMST, we design the formulas to describe the amount of tourists, 
 the environmental quality and the economic income. But now the indicators $I_e, I_c, I_i, I_d$ are introduced
-for better adaptability. In theory, our further extended DMSTM can not only apply to Franz Josef Glacier
+for better adaptability. In theory, our further extended DMST can not only apply to Franz Josef Glacier
 as the main destination and Haast as the complementary destination, but any other destinations impacted by 
 overtourism or requiring promotion to deal with the problem of lacking tourists, as long as necessary data are provided.
 
@@ -529,7 +552,7 @@ where $\zeta$ is the coefficient of environmental investment to inhibit the retr
 $p_{main}$ and $p_{sub}$ are the consumption per person in main and complementary destination, respectively.
 
 \subsection{Apply Multi-Objective Optimization Model to Franz Josef Glacier}
-Since we are generalizing our DMSTM to adapt to other scenic spots, the final multi-objective optimization model
+Since we are generalizing our DMST to adapt to other scenic spots, the final multi-objective optimization model
 also needs some modifications. To be more specific, four indicators are intergrated into the objective function dynamically.
 
 \begin{gather}
@@ -565,8 +588,8 @@ decision-making.
 \subsection{Strengths}
 \begin{itemize}
  \item \textbf{Comprehensive Consideration} \\
- Our DMSTM and its extended versions, take multiple factors into account simultaneously . 
- For example, in DMSTM, we consider the number of tourists, environmental quality, glacial retreat, and social stability. 
+ Our DMST and its extended versions, take multiple factors into account simultaneously . 
+ For example, in DMST, we consider the number of tourists, environmental quality, glacial retreat, and social stability. 
  This holistic approach provides a more accurate representation of the complex relationships within the tourism system, 
  empowering better decision-making. It allows for a balanced assessment of economic, environmental, and social impacts, 
  which is crucial for sustainable tourism development.
@@ -580,7 +603,7 @@ decision-making.
  as it addresses the conflicting goals in tourism management, such as maximizing tourism income while minimizing environmental damage and maintaining social stability.
  \item \textbf{Adaptability} \\
  The models are adaptable to different tourist destinations.
- We demonstrated this ability by applying the extended DMSTM to Franz Josef Glacier in New Zealand.
+ We demonstrated this ability by applying the extended DMST to Franz Josef Glacier in New Zealand.
  With location-specific indicators and dynamic formulas introduced, the model can be customized to fit the unique characteristics of various regions affected by overtourism or in need of tourism promotion.
  This adaptability increases the model's practical value.
 \end{itemize}
@@ -601,7 +624,7 @@ decision-making.
 \end{itemize}
 
 \section{Conclusions}
-In conclusion, our study presents a dynamic game theory based management model for sustainable tourism (DMSTM) and its extended version, 
+In conclusion, our study presents a dynamic game theory based management model for sustainable tourism(DMST) and its extended version, 
 tailored to address overtourism challenges in destinations like Juneau, and Franz Josef Glacier. 
 By considering the number of tourists, environmental quality, glacial retreat and social stability,
 our models offer a holistic and practical approach to balance economic gains with environmental preservation and social welfare.
