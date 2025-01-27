@@ -53,7 +53,7 @@
 \par 
 The rapid growth of tourism in Juneau has brought significant economic benefits,
 but also caused serious challenges such as glacial retreat and social discontent, 
-necessitating the development of a model forsustainable tourism.
+necessitating the development of a model for sustainable tourism.
 Thus we develop a \textbf{dynamic multi-objective optimization} model that integrates 
 \textbf{game theory} to balance \textbf{economic}, \textbf{environmental} and \textbf{social} factors, providing
 practical solutions for sustainable tourism startegies for Juneau and other destinations.
@@ -79,11 +79,11 @@ complementary(Haast) destination with a \textbf{division factor}($\phi_t$). Util
 including tourist numbers, greenhouse gas emissions and so on, the NSGA-\uppercase\expandafter{\romannumeral2}
 was used to find \emph{Pareto-Front} solutions.
 
-The adapted model provided three strategic recommendations: \textbf{economy-first}, \textbf{ecology-first} and 
-\textbf{balanced} with detailed values of decision-making. The result also indicates that the \textbf{government
-investment} become more important compared to Juneau due to the local policies on Franz Josef Glacier.
+The adapted model provided three strategic options: \textbf{economy-first}, \textbf{ecology-first} and 
+\textbf{balanced} with detailed values for decision-making. The result also indicates that the \textbf{government
+investment} is more important compared to Juneau due to the local policies.
 As a extension to DMST, \textbf{main-complementary destination current division} measure also achieved 
-significant economic and environmental co-benefits.
+significant economic and environmental co-benefits, promoting the less-visited Haast successfully.
 
 The highlight of our work is that the model \textbf{DMST and its extensions} established in this paper
 can \textbf{adjust parameters} based on the specific conditions of each tourist destination. It is not only
@@ -192,7 +192,7 @@ In order to intuitively reflect our work process, the flow chart is shown in Fig
         $C_t$ & carbon emissions per tourist & ton/person \\
         $F_t$ & amount of waste produced per tourist & tons/person \\
 
-        $T_p$ & net income from tourism & billion\$ \\
+        $T_p$ & net income from tourism & \$billion \\
         $T_h$ & hotel tax rate & \% \\
         $T_v$ & tourist fees & \$/person \\
 
@@ -203,7 +203,7 @@ In order to intuitively reflect our work process, the flow chart is shown in Fig
         $K_t$ & investment in infrastructure & / \\
 
         $M_t$ & extent of melting of glaciers & / \\
-        $E_G$ & investment in environment protection of scenery spots & billion\$/year \\
+        $E_G$ & investment in environment protection of scenery spots & \$billion/year \\
         \bottomrule
     \end{tabular}
     \begin{tablenotes}
@@ -255,21 +255,21 @@ The number of tourist is affected by many factors, such as the number of tourist
 the quality of environment, the construction of infrastructure and so on. To predict the chagne of number of tourist,
 based on previous reserach works\cite{johnston2005dynamic}, we model its differential as a multi-variables linear equation:
 
-\begin{equation}
-  \frac{\Delta V_t}{V_t} = \left[\left(\frac{a_{a_e}\cdot E}{E+\theta_e} + \frac{a_{a_k}\cdot K}{K+\theta_k} \right) - \beta\cdot(T_h+T_v) - \gamma\cdot(C_t+F_t) - \lambda\cdot M_t \right] \cdot e^{-e_{pdm} \cdot pdm \cdot (1 + dpdm) \cdot (1 - dmdm)}
-\end{equation}
-
-\begin{equation}
+\begin{gather}
+  \frac{\Delta V_t}{V_t} = \left[\left(\frac{a_{a_e}\cdot E}{E+\theta_e} + \frac{a_{a_k}\cdot K}{K+\theta_k} \right) - \beta\cdot(T_h+T_v) - \gamma\cdot(C_t+F_t) - \lambda\cdot M_t + Y\right] \cdot X \\
+  X = \exp(-e_{PDM} \cdot PDM \cdot (1 + PDM) \cdot (1 - PDM)) \\
+  Y = -PDM \cdot \left((1 + PDM) \cdot k_{PDM} + (1 - PDM) \cdot b_{PDM} \right) \\
   \Delta V_t = V_{t+1} - V_t
-\end{equation}
+\end{gather}
 
 where $a_{a_e}, a_{a_k}, \beta, \gamma, \lambda$ are the parameters to fit, and they represent 
 the coefficient of the environment and infrastructure attraction, the coefficient of the tax and expense restraint,
 negative feedback coefficient of environmental pressure and the sensitivity coefficient of glacier melting, respectively.
 While $\theta_E$ and $\theta_K$ are the saturation thresholds of environmental quality and infrastructure investment.
 
-It is worthwhile to note that we consider the effect of epidemic specially in the exponent part of the formula, 
-which will only come into effect when the year used is between 2020 to 2022, so that our predict to the number of 
+It is worthwhile to note that we consider the effect of epidemic specially in the exponent part of the formula, which represent in the formula as the form of correction terms X and Y.
+$PDM\in \{0,1\}$ indicates whether during the pandemic, and $e_{PDM}, k_{PDM}, b_{PDM}$ are the coefficients.
+They will only come into effect when the year used is between 2020 to 2022, so that our predict to the number of 
 visitors will be more accurate.
 
 \subsubsection{The Environmental Quality}
@@ -278,14 +278,20 @@ positively by the environmental quality in the past and the investment in enviro
 insight, we build a dynamic equation to predict the environmental quality
 
 \begin{equation}
-  E_{t+1} = E_t + r_E \cdot E_t \left(1 - \frac{E}{E_{\text{max}}}\right) - \gamma_C \cdot C_t - \gamma_F \cdot F_t - \gamma_G \cdot G_t + \eta \cdot E_G
+  \frac{dE_{t}}{dt} = E_t \left(1 - \frac{E}{E_{\text{max}}}\right) \left(r_E - \gamma_C \cdot C_t - \gamma_F \cdot F_t - \gamma_G \cdot G_t + \eta \cdot E_G\right)
 \end{equation}
 
 where $r_E$ is the rate of self-healing of the environment, while $\gamma_C, \gamma_F, \gamma_G$ are the coefficient of 
 environmental damage caused by carbon emissions, waste generating and glacial retreat. $\eta$ is the restoration efficiency of 
 environmental protection investment, and $E_{max} = 100$ is the upper limit of environmental quality.
 
-Given the complexity of this equation, we use nonlinear least squares method to fit the parameters with 
+Solving this differential equation, we can get 
+
+\begin{equation}
+  E_t=\frac{1}{1+\frac{E_{max}-E_0}{E_0}\cdot \exp(-(r_E\cdot t-\int(\gamma_C\cdot C_t+\gamma_F\cdot \gamma_G\cdot K_t-\eta\cdot G_t)\cdot \mathrm{d}t\ )\ )}
+\end{equation}
+
+Given the complexity of this equation, we replace the integral with summation, and use nonlinear least squares method to fit the parameters with 
 a reasonable restraint that all parameters are positive.
 
 \subsubsection{Glacial Retreat}
@@ -363,7 +369,7 @@ For the multi-objective optimization formula, we derive the optimal \emph{Pareto
 The objective function space and the optimal solution set are shown in Figure 6:
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/model1opt.png}
+  \includegraphics[width=1.0\textwidth]{figures/model1opt.png}
   \caption{Optimal Point in Objective Function Space}
   \label{Figure.6}
 \end{figure}
@@ -386,7 +392,7 @@ Based on the model result and analysis, we propose these suggestions to the deci
 \subsection{Sensitivity Analysis}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/sensitivity.png}
+  \includegraphics[width=0.95\textwidth]{figures/sensitivity.png}
   \caption{Impact of rate adjustments on the model}
   \label{Fig.7}
 \end{figure}
@@ -405,7 +411,6 @@ which has the largets impact on the indicators like tourism income, environmenta
 glacial retreat speed and social stability.
 
 \section{Social Welfare Model via Sustainable Tax Feedback}
-% 需要新模型的架构图
 Though DMST takes the social stability as a optimization objective, it does not consider the social benefits explicitly. 
 In order to achieve the optimization goal of serving the best interest of the locals while maxmizing the tourism income 
 and preserving the environment, we extend DMST such that it takes the Sustainable tax distribution and dynamic feedback mechanism\cite{bayer2004sterman}
@@ -413,7 +418,7 @@ into consideration, and regards the social benefits as a optimization objective.
 
 \subsection{Tax and Expenditure Variables}
 For the sake of representing the effect of sustainable tax distribution and dynamic feedback, 
-several variables about tax are introduced to extend our model:
+several variables about tax are introduced to extend our model\cite{boadway1993public}:
 
 \begin{equation}
   T_t = \alpha \cdot T_p
@@ -526,7 +531,7 @@ For these indicators, the higher the value, the greater the weight. The detailed
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/indicators.png}
+  \includegraphics[width=0.90\textwidth]{figures/indicators.png}
   \caption{Indicators}
   \label{Fig.9}
 \end{figure}
@@ -592,6 +597,26 @@ decision-making.
     \bottomrule
   \end{tabular}
 \end{table}
+
+\subsection{Measures to Promote Less-Visited Area}
+To promote under-visited attractions and achieve balanced tourism distribution,
+our model employs a dynamic, data-driven strategy. 
+By strategically increasing the diversion coefficient (\(\phi_t\)) within ecological and infrastructural 
+limits, more tourists are redirected to secondary sites while safeguarding fragile ecosystems at primary locations. 
+Enhancing the appeal of less-visited areas through targeted marketing, investments in low-carbon infrastructure 
+(e.g., renewable energy facilities, waste management systems), and eco-friendly transportation reduces their carbon footprint 
+and improves visitor capacity. 
+
+The multi-objective optimization framework dynamically adjusts priorities—elevating economic gains in tourism-dependent regions 
+or ecological preservation in sensitive zones—through adaptive weight allocation (\(w_1, w_2, w_3\)). 
+Short-term measures, such as balanced diversion policies (\(\phi_t = 0.18\)) and moderate green investments, 
+address immediate needs, while long-term strategies like large-scale renewable infrastructure funding (\(K_t \geq 8\)
+billion) and carbon pricing incentivize sustainable tourism. 
+
+Real-time monitoring of environmental metrics (e.g., glacier retreat rates) and visitor flows enables agile policy 
+updates, with Pareto-optimal solutions offering tailored strategies based on regional priorities. 
+This integrated approach ensures equitable visitor distribution, economic vitality, 
+and environmental resilience through flexibility and geographic specificity.
 
 \section{Model Evaluation}
 \subsection{Strengths}
@@ -665,7 +690,38 @@ By adopting sustainable tourism practices informed by these models, the scenic s
 % \section{First appendix}
 
 % \end{appendices}
+%% Generate the Memorandum, if it's needed.
+\memoto{The Tourist Councill of Juneau}
+\memofrom{Team \# 2525570}
+\memosubject{Urgent Actions to Balance Tourism and Glaicer Preservation}
+\memodate{\today}
+\memologo{COMAP}
+\begin{memo}[Memorandum]
+  We are Juneau sustainable tourism model developers. Base on our modelings and findings, we would like
+  to inform you our prediction, the effects of different measures and our suggestions on optimizing the outcome.
 
+  Juneau's glaciers are experiencing accelerated melting due to unsustainable tourism practices nowadays. 
+  Our analysis indicated that without immediate intervention, annual glacier retreat rates will increase by 15\%
+  over the next five years, severely damaging both ecological integrity and long-term tourism stability. 
+  Current visitor numbers (2,300+ daily) exceed the glacial ecosystem's carrying capacity by 35\%, directly contributing to irreversible environmental damage. 
+  Additionally, resident satisfaction scores have fallen to 4.2/10, signaling growing community opposition to unchecked tourism.
+
+  In order to change this deteriorating situation, some immediate actions must be taken:
+  \begin{enumerate}
+    \item \textbf{Implement vistor capacity controls}, restrict daily visitors to 1,500 throught a reservation system to reduce the glacial stress by 23\%.
+    \item \textbf{Launch the glacier sustainability fund}, collect the environmental tax and use over 70\% of them directly for glacier restoration.
+    \item \textbf{Strengthen community engagement} by allocating 30\% of tourism revenue to local infrastructure construction, aiming to cut $\text{CO}_\text{2}$ emission by 25\% by 2026.
+  \end{enumerate}
+
+  Besides, for the long-term strategic plan, we also recommend deploy IoT sensors across critical glacial zones to track melt rates and implement real-time monitoring, as well as
+  developing state-of-the-art algorithm to recalibrate visitor caps dynamically based on real-time environmental data.
+
+  After adapting these measures, the annual glacial retreat should be reduced from 1.2 to 0.8 meters by 2026, while the toursim revenue can maintain above \$5.5 milllion annually with
+  low-impact tourism models, and the transparent revenue sharing will restore community trust.
+
+  As grim as the situation may be, we are confident in your decision-makings, and know that the sustainable toursim pattern will be established
+  with your rational measures.
+\end{memo}
 
 \AImatter
 
@@ -720,39 +776,6 @@ This statement aims to capture the essence of the document's contributions while
 
 \end{ReportAiUse}
 
-%% Generate the Memorandum, if it's needed.
-\memoto{The Tourist Councill of Juneau}
-\memofrom{Team \# 2525570}
-\memosubject{Urgent Actions to Balance Tourism and Glaicer Preservation}
-\memodate{\today}
-\memologo{COMAP}
-\begin{memo}[Memorandum]
-  We are Juneau sustainable tourism model developers. Base on our modelings and findings, we would like
-  to inform you our prediction, the effects of different measures and our suggestions on optimizing the outcome.
-
-  % 数据换成我们跑的
-  Juneau's glaciers are experiencing accelerated melting due to unsustainable tourism practices nowadays. 
-  Our analysis indicated that without immediate intervention, annual glacier retreat rates will increase by 15\%
-  over the next five years, severely damaging both ecological integrity and long-term tourism stability. 
-  Current visitor numbers (2,300+ daily) exceed the glacial ecosystem's carrying capacity by 35\%, directly contributing to irreversible environmental damage. 
-  Additionally, resident satisfaction scores have fallen to 4.2/10, signaling growing community opposition to unchecked tourism.
-
-  In order to change this deteriorating situation, some immediate actions must be taken:
-  \begin{enumerate}
-    \item \textbf{Implement vistor capacity controls}, restrict daily visitors to 1,500 throught a reservation system to reduce the glacial stress by 23\%.
-    \item \textbf{Launch the glacier sustainability fund}, collect the environmental tax and use over 70\% of them directly for glacier restoration.
-    \item \textbf{Strengthen community engagement} by allocating 30\% of tourism revenue to local infrastructure construction, aiming to cut $\text{CO}_\text{2}$ emission by 25\% by 2026.
-  \end{enumerate}
-
-  Besides, for the long-term strategic plan, we also recommend deploy IoT sensors across critical glacial zones to track melt rates and implement real-time monitoring, as well as
-  developing state-of-the-art algorithm to recalibrate visitor caps dynamically based on real-time environmental data.
-
-  After adapting these measures, the annual glacial retreat should be reduced from 1.2 to 0.8 meters by 2026, while the toursim revenue can maintain above \$5.5 milllion annually with
-  low-impact tourism models, and the transparent revenue sharing will restore community trust.
-
-  As grim as the situation may be, we are confident in your decision-makings, and know that the sustainable toursim pattern will be established
-  with your rational measures.
-\end{memo}
 
 \end{document}
 %% 
