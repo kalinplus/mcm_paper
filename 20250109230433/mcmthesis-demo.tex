@@ -91,7 +91,7 @@ Therefore, how to realize the sustainability of the tourism becomes a great chal
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/glaicer.jpg}
+  \includegraphics[width=0.9\textwidth]{figures/glaicer.jpg}
   \caption{Mendenhall Glacier, Juneau}
   \label{Fig.1}
 \end{figure}
@@ -115,7 +115,31 @@ Considering the background information and restricted conditions identified in t
 
 
 \subsection{Our Work}
-%TODO
+To summary up this artical, we focus on developing a dynamic multi-objective optimization model for the sustainable tourism industry in Juneau, Alaska. 
+This model integrates a three-party game equilibrium framework involving tourists, attractions, and local residents. 
+It is built upon the interaction of four dynamic systems: tourist volume, environmental quality, economic income, and social satisfaction, 
+aiming to explore the dynamic equilibrium relationship among the economy, society, and environment. 
+By utilizing this model, it becomes feasible to investigate how to minimize the environmental and social impacts while maximizing economic benefits under specific circumstances,
+such as determining the optimal number of visitors.
+
+On the basis of this model, a feedback mechanism is introduced. This mechanism dynamically adjusts the balance among the economic, social, and environmental aspects.
+It achieves this by adjusting the proportion of additional revenues allocated to infrastructure improvement and community development projects that support conservation.
+Moreover, this mechanism can determine the optimal revenue distribution, ensuring the maximization of both economic and social benefits.
+
+The model is further extended to other scenic spots suffering from overtoursim or requring promotion. With a case study of another over-touristed destination, 
+Franz Josef Glacier. This is achieved by introducing a geographic location difference coefficient and a tourist diversion mechanism, which influence the model's weight allocation and constraints.
+The extended model is then used to explore the impacts of tourist diversion and multi-attraction strategies on the overall benefits. 
+Based on the results, optimization policies suitable for Franz Josef Glacier and the adjacent Haast (which has a relatively lower tourist volume) are proposed to achieve a better tourism balance.
+
+In order to intuitively reflect our work process, the flow chart is shown in Figure 2.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/overall_flow.png}
+  \caption{Overall Model Framework}
+  \label{Fig.2}
+\end{figure}
+
 
 \section{Assumption and Justification}
 \begin{itemize}
@@ -199,7 +223,7 @@ the independent variables $V_t, E_t, G_t, S$ mentioned above.
 
 \subsection{Parameters Calibration}
 
-\subsubsection{The Number of Tourist}
+\subsubsection{Tourist Volume}
 The number of tourist is affected by many factors, such as the number of tourist in the last few years, 
 the quality of environment, the construction of infrastructure and so on. To predict the chagne of number of tourist,
 based on previous reserach works\cite{johnston2005dynamic}, we model its differential as a multi-variables linear equation:
@@ -292,6 +316,46 @@ both economic benefits and social weal as well as environmental protection.
 % 需要添加算法求解流程图
 
 \subsection{Model Results and Analysis}
+For the dynamic parameters calibration formulas of tourist volume, environment quality, glcial retreat and social stability, we derive the result mainly with 
+differential evolution algorithm(DE), together with various regression and other algorithms. The flow of DE is shown in Figure X.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/de.png}
+  \caption{Differential Evolution Algorithm}
+  \label{Figure.X}
+\end{figure}
+
+We use the data from 2018 to 2023 as the fitting target to solve the parameters, and try to predict the data from 2024 to 2026 for later use. 
+The result shows that our fittings are quite accurate with low residual error. Thus we can draw a safe conclusion that our prediction
+is of great accuracy and utility. The line chart of prediction results are shown in Figure X.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/pc.png}
+  \caption{Fitting Results}
+  \label{Figure.XX}
+\end{figure}
+
+For the multi-objective optimization formula, we derive the optimal \emph{Pareto solution set} using the combination of NSGA-\uppercase\expandafter{\romannumeral2}.
+The objective function space and the optimal solution set are shown in Figure 3:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/model1opt.png}
+  \caption{Optimal Point in Objective Function Space}
+  \label{Figure.XXX}
+\end{figure}
+
+From this picture, we can see the optimal point: cut off number of vistor = 1.31 million\$, tax rate = 9.78\%, goverment investment = 0.108 billion\$.
+
+Compared with the current data, the tourist volume has excceeded this limit in recent three years, and reach the peak of 1.6 million in 2023, 
+while the current tax rate is about 9\%, which is closed to the optimal value. However, the state of goverment investment on infrastructure is not encouraging,
+with only 30 to 40 million dollars in recent years, far below the ideal 100 million dollars.
+
+Based on the model result and analysis, we propose these suggestions to the decision makers:
+\begin{itemize}
+  \item Limit tourist volume to 1.3 million/year by limiting the number of cruises.
+  \item Maintaining the stability of existing tax rates.
+  \item Increase the government investment greatly to 0.1 billion\$/year, especially in infrastructure construction.
+\end{itemize}
 
 \subsection{Sensitivity Analysis}
 
@@ -386,6 +450,13 @@ Thus it is clear to see that Franz Josef Glacier faces the challenges similar to
 impact the environment greatly. Rising visitor numbers driven by adeventure tourism and glacier hikes have accelerated ice melt
 due to human activity and carbon footprint, while overwhelming local resources.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/glaicer2.png}
+  \caption{Franz Josef Glacier, New Zealand}
+  \label{Fig.3}
+\end{figure}
+
 \subsection{Haast As Secondary Scenic Spot}
 Haast is strategically positioned as a complementary destination to Franz Josef Glacier due to its geographic proximity, ecological diversity, and historical ties.
 Located along the Haast Pass—a vital route connecting Franz Josef Glacier to Wanaka—it offers contrasting landscapes like rainforests, waterfalls, and glacial-fed attractions, enriching the region's tourism portfolio.
@@ -406,23 +477,14 @@ And we use a current division factor $\phi_t$ to control the attraction of compl
 
 \subsection{Model Indicators}
 To model the scenic spot thoroughly without losing generalities, four indicators are introduced.
-For these indicators, the higher the value, the greater the weight.
-% 换成一张图，说明这些indicators
+For these indicators, the higher the value, the greater the weight. The detailed means are shown in Figure X.
 
-\begin{table}[H]
-  \caption{\textbf{Indicators}} 
+\begin{figure}[H]
   \centering
-  \begin{tabular}{ccc}
-    \toprule 
-      Indicator & Meaning & Range \\
-    \midrule
-      $I_e$ & indicator of environmental vulnerability & $[0, 1]$ \\
-      $I_c$ & indicator of the value of cultural heritage & $[0, 1]$ \\
-      $I_i$ & indicator of infrastructure pressure & $[0, 1]$ \\
-      $I_d$ & tourism as a percentage of GDP & $[0, 1]$ \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+  \includegraphics[width=0.9\textwidth]{figures/indicators.png}
+  \caption{Indicators}
+  \label{Fig.XXXX}
+\end{figure}
 
 \subsection{Dynamic Formula Design}
 Similar to the dynamic system modeled by DMSTM, we design the formulas to describe the amount of tourists, 
@@ -469,7 +531,8 @@ And these coefficient are learnt with the data of Franz Josef Glacier and Hasst.
 
 After determining these formulas, we use the statistics from 2018 to 2023, including the number of tourists, the greenhouse gas, 
 the infrastructure investment and Franz Josef Glacier, to fit the parameters and get the \emph{Pareto Front} solution sets, which
-are shown in the solution set table:
+are shown in the solution set table. Different from previous optimal solution set, we provide three strategies for more flexible 
+decision-making.
 
 \begin{table}[H]
   \caption{Solution Sets}    
@@ -544,34 +607,6 @@ are shown in the solution set table:
 
 \begin{appendices}
 
-\section{First appendix}
-
-% In addition, your report must include a letter to the Chief Financial Officer (CFO) of the Goodgrant Foundation, Mr. Alpha Chiang, that describes the optimal investment strategy, your modeling approach and major results, and a brief discussion of your proposed concept of a return-on-investment (ROI). This letter should be no more than two pages in length.
-
-% \begin{letter}{Dear, Mr. Alpha Chiang}
-
-% \lipsum[1-2]
-
-% \vspace{\parskip}
-
-% Sincerely yours,
-
-% Your friends
-
-% \end{letter}
-% Here are simulation programmes we used in our model as follow.\\
-
-% \textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
-% \lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
-
-% \section{Second appendix}
-
-% some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
-% \lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
-
-\end{appendices}
-
-
 \AImatter
 
 \begin{ReportAiUse}{9}
@@ -587,7 +622,7 @@ Model Complexity: The models are relatively complex, with multiple equations and
 DeepSeek-R1 \\
 Query1: Please introduce Franz Josef Glacier briefly, and compare its situation with overtourism dilemma in Juneau \\
 Output: 
-Franz Josef Glacier, located on New Zealand’s South Island, is a renowned natural attraction famed for its dramatic ice formations and accessibility. 
+Franz Josef Glacier, located on New Zealand's South Island, is a renowned natural attraction famed for its dramatic ice formations and accessibility. 
 However, like Juneau, Alaska—which faces overtourism pressures from cruise ships and visitors to the Mendenhall Glacier—Franz Josef grapples with the environmental and infrastructural strain of mass tourism. 
 Rising visitor numbers, driven by adventure tourism and glacier hikes, have accelerated ice melt due to human activity and carbon footprints, while overwhelming local resources. 
 Efforts to balance economic benefits with sustainability, such as limiting access or raising fees, mirror Juneau’s challenges in preserving fragile ecosystems amid growing global travel demand. 
@@ -616,7 +651,7 @@ Both destinations highlight the urgent need for adaptive management to protect n
   \begin{enumerate}
     \item \textbf{Implement vistor capacity controls}, restrict daily visitors to 1,500 throught a reservation system to reduce the glacial stress by 23\%.
     \item \textbf{Launch the glacier sustainability fund}, collect the environmental tax and use over 70\% of them directly for glacier restoration.
-    \item \textbf{Strengthen community engagement} by allocating 30\% of tourism revenue to local infrastructure construction, aiming to cut $\text{CO}_\text{2}$ emission by 25\% by 2026s.
+    \item \textbf{Strengthen community engagement} by allocating 30\% of tourism revenue to local infrastructure construction, aiming to cut $\text{CO}_\text{2}$ emission by 25\% by 2026.
   \end{enumerate}
 
   Besides, for the long-term strategic plan, we also recommand deploy IoT sensors across critical glacial zones to track melt rates and implement real-time monitoring, as well as
