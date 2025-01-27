@@ -10,6 +10,21 @@ John Ap.
 \newblock Residents' perceptions on tourism impacts.
 \newblock {\em Annals of tourism Research}, 19(4):665--690, 1992.
 
+\bibitem{Wang2021}
+Lin Wang, Shiyu Li, Zuoyuan Xiahou, and Yuxuan Gao.
+\newblock Analysis of the tripartite environmental governance mechanism among the government, enterprises, and residents based on evolutionary game.
+\newblock {\em World Economic Exploration}, 10(2):17 -- 30, 2021.
+
+\bibitem{johnston2005dynamic}
+Robert~J Johnston and Timothy~J Tyrrell.
+\newblock A dynamic model of sustainable tourism.
+\newblock {\em Journal of Travel Research}, 44(2):124--134, 2005.
+
+\bibitem{bayer2004sterman}
+Steffen Bayer.
+\newblock Sterman, john. 2000. business dynamics: Systems thinking and modeling for a complex world.
+\newblock {\em Interfaces}, 34(4):324--327, 2004.
+
 \bibitem{wilson2013west}
 Kerry-Jayne Wilson.
 \newblock {\em West Coast Walking}.
@@ -19,5 +34,10 @@ Kerry-Jayne Wilson.
 Brian Anderson, Wendy Lawson, and Ian Owens.
 \newblock Response of franz josef glacier ka roimata o hine hukatere to climate change.
 \newblock {\em Global and Planetary Change}, 63(1):23--30, 2008.
+
+\bibitem{bertsimas1998air}
+Dimitris Bertsimas and Sarah~Stock Patterson.
+\newblock The air traffic flow management problem with enroute capacities.
+\newblock {\em Operations research}, 46(3):406--422, 1998.
 
 \end{thebibliography}

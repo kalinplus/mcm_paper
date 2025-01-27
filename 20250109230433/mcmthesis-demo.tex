@@ -190,7 +190,7 @@ Considering the background information and restricted conditions identified in t
 % The overall structure of the model is shown in Fig.X. 需要架构图
 We take the effect of the number of tourist $V_t$, the quality of environment $E_t$, 
 the retreat of glaciers $G_t$, the stability of society $S$ into consideration , 
-and build a game theory based model, DMSTM, to achieve the multi-objective optimization.
+and build a game theory based model\cite{Wang2021}, DMSTM, to achieve the multi-objective optimization.
 DMSTM aims to maxmize the net income from toruism while minizing the carbon footprint,
 garbage generating and glacial recession, as well as keep the pressure on infrastructure within some limits,
 to provide better decision-making advice.
@@ -201,8 +201,8 @@ the independent variables $V_t, E_t, G_t, S$ mentioned above.
 
 \subsubsection{The Number of Tourist}
 The number of tourist is affected by many factors, such as the number of tourist in the last few years, 
-the quality of environment, the construction of infrastructure... To predict the chagne of number of tourist,
-we use multiple linear regression method
+the quality of environment, the construction of infrastructure and so on. To predict the chagne of number of tourist,
+based on previous reserach works\cite{johnston2005dynamic}, we model its differential as a multi-variables linear equation:
 
 \begin{equation}
   \frac{\Delta V_t}{V_t} = \left[\left(\frac{a_{a_e}\cdot E}{E+\theta_e} + \frac{a_{a_k}\cdot K}{K+\theta_k} \right) - \beta\cdot(T_h+T_v) - \gamma\cdot(C_t+F_t) - \lambda\cdot M_t \right] \cdot e^{-e_{pdm} \cdot pdm \cdot (1 + dpdm) \cdot (1 - dmdm)}
@@ -241,8 +241,8 @@ a reasonable restraint that all parameters are positive.
 % we draw the flowchart Figure X below
 
 \subsubsection{Glacial Retreat}
-In our model, the rate of glacial retreat is determined by this rate in the past, the carbon emissions and the number of visitors.
-So we construct a linear model
+Based on our assumptions, the rate of glacial retreat is determined by this rate in the past, the carbon emissions and the number of visitors.
+So we construct a relatively simple linear model
 
 \begin{equation}
   G_t = A \cdot C_t + \mu \cdot V_t + G_0
@@ -299,7 +299,7 @@ both economic benefits and social weal as well as environmental protection.
 % 需要新模型的架构图
 Though DMSTM takes the social stability as a optimization objective, it does not consider the social benefits explicitly. 
 In order to achieve the optimization goal of serving the best interest of the locals while maxmizing the tourism income 
-and preserving the environment, we extend DMSTM such that it takes the Sustainable tax distribution and dynamic feedback mechanism
+and preserving the environment, we extend DMSTM such that it takes the Sustainable tax distribution and dynamic feedback mechanism\cite{bayer2004sterman}
 into consideration, and regards the social benefits as a optimization objective.
 
 \subsection{Tax and Expenditure Variables}
@@ -383,7 +383,7 @@ It is now once again 3 km shorter than it was 100 years ago. Based on these patt
 Franz Josef Glacier is predicted to retreat 5 kilometres (3.1 mi) and lose 38\% of its mass by 2100 in a mid-range scenario of warming\cite{anderson2008response}
 
 Thus it is clear to see that Franz Josef Glacier faces the challenges similar to Juneau, Alaska, where overtourism 
-impact the environment greatly. Rising visitor numbers driven by adeventure tourism and glacier hikes have accelerated cie melt
+impact the environment greatly. Rising visitor numbers driven by adeventure tourism and glacier hikes have accelerated ice melt
 due to human activity and carbon footprint, while overwhelming local resources.
 
 \subsection{Haast As Secondary Scenic Spot}
@@ -397,7 +397,7 @@ Ultimately, Haast enhances regional resilience, balancing conservation with visi
 
 With this consideration in mind, we further divide the tourist amount $V_t$ into $V_{t,main}$ and $V_{t,sub}$, where $V_{t,main}$ represents the number of tourists 
 in the main scenery spot, Franz Josef Glacier; while $V_{t,sub}$ represents the number of tourists in complementary scenery spot, Haast.
-And we use a current division factor $\phi_t$ to control the attraction of complementary destination by specific policies such that
+And we use a current division factor $\phi_t$ to control the attraction of complementary destination by specific policies such that\cite{bertsimas1998air}
 
 \begin{align}
   & V_{t,main} = V_t \cdot (1 - \phi_t) \\
