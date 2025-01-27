@@ -128,7 +128,7 @@ Considering the background information and restricted conditions identified in t
   It is important to note that this assumption does not neglect the potential impact of predictable environmental and social change.
   
   \item \textbf{Assumption3:} The touristsm, locals and the government are rational decision-makers aiming to maximize their own utility and possessing complete logical reasoning abilities.% 因为用了博弈论模型，加上理性人假设
-  \item \textbf{Justification3:} This assumption is well-grounded in economic theory. Tourists typically make travel decisions based on cost-benefit analyses\cite{crouch2004determinants}, 
+  \item \textbf{Justification3:} This assumption is well-grounded in economic theory. Tourists typically make travel decisions based on cost-benefit analysis\cite{crouch2004determinants}, 
   and local residents engage in tourism-related activities to maximize their benefits\cite{ap1992residents}.
 \end{itemize}
 
@@ -291,6 +291,10 @@ As for the solution method, we use NSGA-\uppercase\expandafter{\romannumeral2} a
 both economic benefits and social weal as well as environmental protection.
 % 需要添加算法求解流程图
 
+\subsection{Model Results and Analysis}
+
+\subsection{Sensitivity Analysis}
+
 \section{Social Welfare Model via Sustainable Tax Feedback}
 % 需要新模型的架构图
 Though DMSTM takes the social stability as a optimization objective, it does not consider the social benefits explicitly. 
@@ -363,23 +367,164 @@ Because we only add a new optimization objective, the original constraints such 
 remains unchanged. And we still use NSGA-\uppercase\expandafter{\romannumeral2} algorithm to find
 \emph{Pareto Front} to balance economic, environmental, cost and social effect.
 
-\subsection{Demonstration of Extended Model Result}
+\section{Adapt Extended DMSTM to Franz Josef Glacier}
+\subsection{The Situation of Overtourism in Franz Josef Glacier}
+Franz Josef Glacier, located in Westland Tai Poutini National Park on the West Coast of New Zealand's South Island, 
+is a 12-kilometer-long temperate maritime glacier. Franz Josef glacier is the one of the most publicly-accessible glaciers in New Zealand,
+and among the most accessible in the world -- until recently, there was easy walking access directly to the glacier termini. 
+Consequently for over a century they have been a significant tourist attraction\cite{wilson2013west}
 
-%TODO
-\section{Model Results and Analyses}
-%TODO
-\section{Sensitivity Analysis}
+Today the Franz Josef glacier area is the third-most-visited tourist spot in New Zealand, 
+and one of the main tourist attractions on the West Coast. It had around 250,000 visitors a year in 2008, 
+increasing to 700,000 a year (500,000 overnight) in 2017.
+
+However, after 2008 this glacier entered a very rapid phase of retreat, shrinking by 1.5 km between 2008 and 2017.
+It is now once again 3 km shorter than it was 100 years ago. Based on these patterns, 
+Franz Josef Glacier is predicted to retreat 5 kilometres (3.1 mi) and lose 38\% of its mass by 2100 in a mid-range scenario of warming\cite{anderson2008response}
+
+Thus it is clear to see that Franz Josef Glacier faces the challenges similar to Juneau, Alaska, where overtourism 
+impact the environment greatly. Rising visitor numbers driven by adeventure tourism and glacier hikes have accelerated cie melt
+due to human activity and carbon footprint, while overwhelming local resources.
+
+\subsection{Haast As Secondary Scenic Spot}
+Haast is strategically positioned as a complementary destination to Franz Josef Glacier due to its geographic proximity, ecological diversity, and historical ties.
+Located along the Haast Pass—a vital route connecting Franz Josef Glacier to Wanaka—it offers contrasting landscapes like rainforests, waterfalls, and glacial-fed attractions, enriching the region's tourism portfolio.
+Its role as part of the Te Wahipounamu World Heritage Area and shared heritage with explorer Julius von Haast further strengthen its cultural relevance.
+
+By integrating Haast into tourism circuits, it effectively diverts visitor traffic from Franz Josef Glacier, mitigating overtourism impacts such as glacial degradation and infrastructure strain.
+This redistribution fosters sustainable tourism: visitors engage in low-impact activities, such as hiking, wildlife viewing, while supporting local economies. 
+Ultimately, Haast enhances regional resilience, balancing conservation with visitor demand and preserving the West Coast's ecological integrity.
+
+With this consideration in mind, we further divide the tourist amount $V_t$ into $V_{t,main}$ and $V_{t,sub}$, where $V_{t,main}$ represents the number of tourists 
+in the main scenery spot, Franz Josef Glacier; while $V_{t,sub}$ represents the number of tourists in complementary scenery spot, Haast.
+And we use a current division factor $\phi_t$ to control the attraction of complementary destination by specific policies such that
+
+\begin{align}
+  & V_{t,main} = V_t \cdot (1 - \phi_t) \\
+  & V_{t,sub} = V_t \cdot \phi_t
+\end{align}
+
+\subsection{Model Indicators}
+To model the scenic spot thoroughly without losing generalities, four indicators are introduced.
+For these indicators, the higher the value, the greater the weight.
+% 换成一张图，说明这些indicators
+
+\begin{table}[H]
+  \caption{\textbf{Indicators}} 
+  \centering
+  \begin{tabular}{ccc}
+    \toprule 
+      Indicator & Meaning & Range \\
+    \midrule
+      $I_e$ & indicator of environmental vulnerability & $[0, 1]$ \\
+      $I_c$ & indicator of the value of cultural heritage & $[0, 1]$ \\
+      $I_i$ & indicator of infrastructure pressure & $[0, 1]$ \\
+      $I_d$ & tourism as a percentage of GDP & $[0, 1]$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Dynamic Formula Design}
+Similar to the dynamic system modeled by DMSTM, we design the formulas to describe the amount of tourists, 
+the environmental quality and the economic income. But now the indicators $I_e, I_c, I_i, I_d$ are introduced
+for better adaptability. In theory, our further extended DMSTM can not only apply to Franz Josef Glacier
+as the main destination and Haast as the complementary destination, but any other destinations impacted by 
+overtourism or requiring promotion to deal with the problem of lacking tourists, as long as necessary data are provided.
+
+Current division feedback and geographical attributes feedback are introduced to construct our dynamic tourists amount predicting formula:
+
+\begin{gather}
+  V_t = \alpha \cdot \left(\frac{E_t}{E_t + \theta_E} + \frac{K_t}{K_t + \theta_K} \right) - \beta \cdot (T_h + T_v)
+  - \gamma \cdot (C_t + G_t) + \lambda \cdot \phi_t \cdot (1 - I_c) \\
+  \lambda = 0.15 \cdot (1 + I_d)
+\end{gather}
+
+where $\lambda$ represent the coefficient of attraction of the complementary destination. The higher the economic dependence is,
+this coefficient is larger.
+
+Similarly, we introduce other indicators into the formulas of environmental quality, glacial retreat and economic income:
+
+\begin{gather}
+  E_{t+1} = E_t + r_E \cdot E_t \left(1 - \frac{E_t}{E_{max}}\right) - \gamma_C \cdot (C_{t,main} + C_{t,sub}) - \gamma_G \cdot G_t \cdot I_e + \eta \cdot K_t \\
+  G_t = G_0 \cdot \exp \left(\frac{\epsilon \cdot V_{t,main}}{1+\zeta \cdot K_t}\right) \\
+  T_p = p_{main} \cdot V_{t,main} \cdot I_d + p_{sub} \cdot V_{t,sub} \cdot (1 - I_d) - c_{eco} \cdot K_t
+\end{gather}
+
+where $\zeta$ is the coefficient of environmental investment to inhibit the retreat, while 
+$p_{main}$ and $p_{sub}$ are the consumption per person in main and complementary destination, respectively.
+
+\subsection{Apply Multi-Objective Optimization Model to Franz Josef Glacier}
+Since we are generalizing our DMSTM to adapt to other scenic spots, the final multi-objective optimization model
+also needs some modifications. To be more specific, four indicators are intergrated into the objective function dynamically.
+
+\begin{gather}
+  Maximize \quad w_1\cdot T_p - w_2 \cdot (C_t + G_t \cdot I_e) - w_3 \cdot (1 - S_t) \\ 
+  w_1 = 0.4 + 0.2I_d \\
+  w_2 = 0.3 + 0.2I_e \\
+  w_3 = 0.3 - 0.1I_e
+\end{gather}
+
+Here, $w_1, w_2, w_3$ are determined through linear regression to assign the weight dynamically based on local circumsstances.
+And these coefficient are learnt with the data of Franz Josef Glacier and Hasst. 
+
+After determining these formulas, we use the statistics from 2018 to 2023, including the number of tourists, the greenhouse gas, 
+the infrastructure investment and Franz Josef Glacier, to fit the parameters and get the \emph{Pareto Front} solution sets, which
+are shown in the solution set table:
+
+\begin{table}[H]
+  \caption{Solution Sets}    
+  \centering
+  \begin{tabular}{ccccc}
+    \toprule
+    Strategy & $\phi_t$ & $K_t$ (billion) & $T_p$ (billion) & $G_t$ (m/year) \\
+    \midrule
+    economy first & 0.25 & 0.30 & 0.62 & 1.18 \\
+    ecology first & 0.12 & 0.80 & 0.45 & 0.95 \\
+    balanced & 0.18 & 0.60 & 0.53 & 1.05 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Model Evaluation}
+\subsection{Strengths}
+\begin{itemize}
+ \item \textbf{Comprehensive Consideration} \\
+ Our DMSTM and its extended versions, take multiple factors into account simultaneously . 
+ For example, in DMSTM, we consider the number of tourists, environmental quality, glacial retreat, and social stability. 
+ This holistic approach provides a more accurate representation of the complex relationships within the tourism system, 
+ empowering better decision-making. It allows for a balanced assessment of economic, environmental, and social impacts, 
+ which is crucial for sustainable tourism development.
+ \item \textbf{Data-Driven and Rigorous Parameter Calibration} \\
+ We collect data from reliable sources such as government websites and research papers.
+ The parameters in our models are calibrated using appropriate statistical methods, like multiple linear regression and elastic network regression method.
+ This data-driven approach ensures that the models are based on real-world data, enhancing their accuracy and reliability.
+ \item \textbf{Multi-Objective Optimization} \\
+ By using multi-objective optimization methods like the NSGA-\uppercase\expandafter{\romannumeral2} algorithm,
+ we are able to find sets of \emph{Pareto-optimal} solutions. This approach is better than single-objective optimization, 
+ as it addresses the conflicting goals in tourism management, such as maximizing tourism income while minimizing environmental damage and maintaining social stability.
+ \item \textbf{Adaptability} \\
+ The models are adaptable to different tourist destinations.
+ We demonstrated this ability by applying the extended DMSTM to Franz Josef Glacier in New Zealand.
+ With location-specific indicators and dynamic formulas introduced, the model can be customized to fit the unique characteristics of various regions affected by overtourism or in need of tourism promotion.
+ This adaptability increases the model's practical value.
+\end{itemize}
+
+\subsection{Weeknesses}
+\begin{itemize}
+ \item \textbf{Simplifying Assumptions} \\
+ Although our assumptions are reasonable, they do simplify the real-world situation to some extent.
+ For instance, assuming that tourists, locals, and the government are perfectly rational decision-makers with complete information may not hold true in reality.
+ In practice, decision-makers will be influenced by emotions, limited knowledge, and external factors not accounted for in the model.
+ However, these assumptions are common in economic-based models and do not severely undermine the overall validity of the results.
+ \item \textbf{Model Complexity} \\
+ With limited time to develop and optimize our models, they are relatively complex, with multiple equations and parameters.
+ This complexity may make it challenging for some stakeholders, such as local community members or small-scale tourism operators,
+ to fully understand and interpret the results.
+ While efforts have been made to simplify the presentation of findings, 
+ further work should be done to make the models more accessible without sacrificing their accuracy.
+\end{itemize}
 
 \section{Conclusions}
-
-\section{A Summary}
-
-\section{Evaluate of the Mode}
-
-\section{Strengths and weaknesses}
-
-\subsection{Strengths}
-
 
 % \subsection{How to cite?}
 % bibliography cite use \cite{1,2,3}
