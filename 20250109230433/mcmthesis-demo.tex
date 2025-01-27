@@ -54,35 +54,41 @@
 The rapid growth of tourism in Juneau has brought significant economic benefits,
 but also caused serious challenges such as glacial retreat and social discontent, 
 necessitating the development of a model forsustainable tourism.
-Thus we develop a dynamic multi-objective optimization model that integrates 
-game theory to balance economic, environmental and social factors, providing
-practical solutions for sustainable tourism management in Juneau and 
-adaptable strategies for other overtourism-affected destinations.
+Thus we develop a \textbf{dynamic multi-objective optimization} model that integrates 
+\textbf{game theory} to balance \textbf{economic}, \textbf{environmental} and \textbf{social} factors, providing
+practical solutions for sustainable tourism startegies for Juneau and other destinations.
 
-For problem 1, we developed a game theory-based dynamic management model (DMST)
-integrating tourist volume, environmental quality, glacial retreat and social stability.
-Multi-variable linear equations were used for parameter calibration, with Differential
-Evolution(DE) employed to find optimal solution set.
-As for revenue allocation, we introduced a Socail Welfare Model that divided social spending into 
+\textbf{For Problem 1}, we developed a \textbf{game theory-based dynamic management model (DMST)}
+integrating \textbf{tourist volume}, \textbf{environmental quality}, \textbf{glacial retreat} and \textbf{social stability}.
+\emph{Multi-variable linear} equations were used for parameter calibration, with \emph{Differential
+Evolution(DE)} employed to find optimal solution set.
+As for revenue allocation, we introduced a \textbf{Social Welfare Model} that divided social spending into 
 infrastructure, environmental protection, and community development, 
 using specific allocation rates to ensure balanced benefits.
 
 Our analysis indicated that limiting tourist volume to 1.3 million/year, setting hotel tax rate
 around 9.78\% and increaseing government investment to \$0.108 billion/year will optimize 
 economic outcomes while minimizing environmental damage and maintaining social stability.
-Specifically, the sensitivity analysis shows that the tourism volume is the most important 
-factor, impacting the tourism income and environment greatly.
+Specifically, the sensitivity analysis shows that the \textbf{tourism volume} is the most important 
+factor, impacting the tourism income and environment most greatly.
 
-For problem 2, we extended the DMST to address overtourism challenges in Franz Josef Glacier 
-to show its adaptability. To adapt the model, location-specific indicators and a tourist diversion
-mechanism are introduced, involving dividing tourist volume into main(Franz Josef Glacier) and 
-Secondary(Haast) destination with a division factor($\phi_t$). Utilizing data from 2018 to 2023, 
+\textbf{For Problem 2}, we extended the DMST to address overtourism challenges in Franz Josef Glacier 
+to prove its \textbf{adaptability}. To adapt the model, \textbf{location-specific indicators} and a \textbf{tourist diversion
+mechanism} are introduced, involving dividing tourist volume into main(Franz Josef Glacier) and 
+complementary(Haast) destination with a \textbf{division factor}($\phi_t$). Utilizing data from 2018 to 2023, 
 including tourist numbers, greenhouse gas emissions and so on, the NSGA-\uppercase\expandafter{\romannumeral2}
-was used to find Pareto-Front solutions.
+was used to find \emph{Pareto-Front} solutions.
 
+The adapted model provided three strategic recommendations: \textbf{economy-first}, \textbf{ecology-first} and 
+\textbf{balanced} with detailed values of decision-making. The result also indicates that the \textbf{government
+investment} become more important compared to Juneau due to the local policies on Franz Josef Glacier.
+As a extension to DMST, \textbf{main-complementary destination current division} measure also achieved 
+significant economic and environmental co-benefits.
 
-
-
+The highlight of our work is that the model \textbf{DMST and its extensions} established in this paper
+can \textbf{adjust parameters} based on the specific conditions of each tourist destination. It is not only
+easy to implement and promote, but also capable of providing \textbf{personalized sustainable tourism 
+management recommendations} for different tourist attractions.
 
 \begin{keywords}
 sustainable tourism; multi-objective optimization; dynamic management model; tripartite game
@@ -207,9 +213,15 @@ In order to intuitively reflect our work process, the flow chart is shown in Fig
   \end{threeparttable}
 \end{table}
 
-\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game (DMST)}
+\section{Tripartite Game Based Dynamic Management Model for Sustainable Tourism (DMST)}
+The structure of DMST is shown in Figure 3.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/model1structure.png}
+  \caption{DMST Framework}
+  \label{Fig.3}
+\end{figure}
 
-% The overall structure of the model is shown in Fig.X. 需要架构图
 We take the effect of the number of tourist $V_t$, the quality of environment $E_t$, 
 the retreat of glaciers $G_t$, the stability of society $S$ into consideration , 
 and build a game theory based model\cite{Wang2021}, DMST, to achieve the multi-objective optimization.
@@ -276,9 +288,6 @@ environmental protection investment, and $E_{max} = 100$ is the upper limit of e
 Given the complexity of this equation, we use nonlinear least squares method to fit the parameters with 
 a reasonable restraint that all parameters are positive.
 
-% In order to describe our process of fitting the parameters to predict the environmental quality more clearly,
-% we draw the flowchart Figure X below
-
 \subsubsection{Glacial Retreat}
 Based on our assumptions, the rate of glacial retreat is determined by this rate in the past, the carbon emissions and the number of visitors.
 So we construct a relatively simple linear model
@@ -332,31 +341,31 @@ both economic benefits and social weal as well as environmental protection.
 
 \subsection{Model Results and Analysis}
 For the dynamic parameters calibration formulas of tourist volume, environment quality, glcial retreat and social stability, we derive the result mainly with 
-differential evolution algorithm(DE), together with various regression and other algorithms. The flow of DE is shown in Figure X.
+differential evolution algorithm(DE), together with various regression and other algorithms. The flow of DE is shown in Figure 4.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/de.png}
+  \includegraphics[width=0.4\textwidth]{figures/de.png}
   \caption{Differential Evolution Algorithm}
-  \label{Figure.X}
+  \label{Figure.4}
 \end{figure}
 
 We use the data from 2018 to 2023 as the fitting target to solve the parameters, and try to predict the data from 2024 to 2026 for later use. 
 The result shows that our fittings are quite accurate with low residual error. Thus we can draw a safe conclusion that our prediction
-is of great accuracy and utility. The line chart of prediction results are shown in Figure X.
+is of great accuracy and utility. The line chart of prediction results are shown in Figure 5.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/pc.png}
   \caption{Fitting Results}
-  \label{Figure.XX}
+  \label{Figure.5}
 \end{figure}
 
 For the multi-objective optimization formula, we derive the optimal \emph{Pareto solution set} using the combination of NSGA-\uppercase\expandafter{\romannumeral2}.
-The objective function space and the optimal solution set are shown in Figure 3:
+The objective function space and the optimal solution set are shown in Figure 6:
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/model1opt.png}
   \caption{Optimal Point in Objective Function Space}
-  \label{Figure.XXX}
+  \label{Figure.6}
 \end{figure}
 
 From this picture, we can see the optimal point: cut off number of vistor = 1.31 million\$, tax rate = 9.78\%, government investment = 0.108 billion\$.
@@ -379,7 +388,7 @@ Based on the model result and analysis, we propose these suggestions to the deci
   \centering
   \includegraphics[width=0.9\textwidth]{figures/sensitivity.png}
   \caption{Impact of rate adjustments on the model}
-  \label{Fig.xxxxx}
+  \label{Fig.7}
 \end{figure}
 
 We conducted a sensitivity analysis on our DMST to verify its stability and find the most import factor among 
@@ -438,7 +447,7 @@ Base on the allocation of the tax, we propose a novel model to maxmize the socia
 \end{equation}
 
 where $\beta_1, \beta_2, \beta_3$ are the efficiency weight of the fields and should be setted by the decision-maker.
-With our analysis, the recommanded values are $\beta_1=0.3, \beta_2=0.4, \beta_3=0.4$
+With our analysis, the recommended values are $\beta_1=0.3, \beta_2=0.4, \beta_3=0.4$
 
 While each of these three expenditures has its own rate, the overall balance is also important. After observing the 
 these three kind of expenditures of Juneau government from 2014 to 2022, we decide to introduce several 
@@ -490,7 +499,7 @@ due to human activity and carbon footprint, while overwhelming local resources.
   \centering
   \includegraphics[width=0.9\textwidth]{figures/glaicer2.png}
   \caption{Franz Josef Glacier, New Zealand}
-  \label{Fig.3}
+  \label{Fig.8}
 \end{figure}
 
 \subsection{Haast As Secondary Scenic Spot}
@@ -513,13 +522,13 @@ And we use a current division factor $\phi_t$ to control the attraction of compl
 
 \subsection{Model Indicators}
 To model the scenic spot thoroughly without losing generalities, four indicators are introduced.
-For these indicators, the higher the value, the greater the weight. The detailed means are shown in Figure X.
+For these indicators, the higher the value, the greater the weight. The detailed means are shown in Figure 9.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/indicators.png}
   \caption{Indicators}
-  \label{Fig.XXXX}
+  \label{Fig.9}
 \end{figure}
 
 \subsection{Dynamic Formula Design}
@@ -664,10 +673,13 @@ By adopting sustainable tourism practices informed by these models, the scenic s
 \bibitem{AI1}
 Doubao-1.5 \\
 Query1: What are the weeknesses of our models? \\
-Output: 
+Output: \\
 8.2 Weaknesses \\
 Simplifying Assumptions: Although our assumptions are reasonable, they simplify the real - world situation. For example, assuming that tourists, locals, and the government are rational decision - makers with complete information may not be true in reality. In practice, decision - making can be impacted by emotions, limited knowledge, and external factors not accounted for in the model. \\
 Model Complexity: The models are relatively complex, with multiple equations and parameters. This complexity may make it challenging for some stakeholders, such as local community members or small - scale tourism operators, to fully understand and interpret the results. \\
+
+Query2: We have prepared a policy memorandum for the Juneau City Tourism Commission that clearly describes the study's findings, the expected impacts of policy implementation, and recommendations for long-term optimization. These recommendations include strategies for managing visitor flows, tax and fee dynamics, and synergistic development of multiple attractions. Please make this paragraph more fluent. \\
+Output: A policy memorandum is prepared for the Juneau City Tourism Commission. This memorandum clearly presents the study's findings, the expected impacts of policy implementation, and recommendations for long - term optimization. These recommendations cover aspects such as visitor flow management strategies, tax and fee adjustments, and the synergistic development of multiple attractions. \\
 
 \bibitem{AI2}
 DeepSeek-R1 \\
@@ -678,6 +690,33 @@ However, like Juneau, Alaska—which faces overtourism pressures from cruise shi
 Rising visitor numbers, driven by adventure tourism and glacier hikes, have accelerated ice melt due to human activity and carbon footprints, while overwhelming local resources. 
 Efforts to balance economic benefits with sustainability, such as limiting access or raising fees, mirror Juneau’s challenges in preserving fragile ecosystems amid growing global travel demand. 
 Both destinations highlight the urgent need for adaptive management to protect natural wonders from loving them to death.
+
+\bibitem{AI3}
+YueWen-Step2 \\ 
+Query1: Please summarize that what problem this paper solved \\
+Output: 
+This paper addresses the challenge of overtourism in destinations like Juneau, Alaska, and Franz Josef Glacier, New Zealand, by proposing a dynamic management model for sustainable tourism. The key problems solved include:
+
+Model Development: The paper develops a model to stabilize the tourism industry by optimizing income while controlling the carbon footprint, the rate of melting of glaciers, and social satisfaction. This model, named DMSTM (Dynamic Management Model of Sustainable Tourism Based on Tripartite Game), integrates a three-party game equilibrium framework involving tourists, attractions, and local residents.
+
+Revenue Allocation: The paper introduces a sustainable tax feedback mechanism to allocate the expenditures from additional revenue to areas such as infrastructure and environmental protection reasonably. This mechanism ensures the maximization of social benefits by dynamically adjusting the balance among economic, social, and environmental aspects.
+
+Model Adaptability: The paper extends the model to other overtourism-affected tourist destinations, showing how location-specific factors influence measure importance. It introduces a geographic location difference coefficient and a tourist diversion mechanism to adjust the model's weight allocation and constraints, making it adaptable to different scenarios.
+
+Policy Recommendations: The paper provides policy recommendations for optimizing tourism outcomes, including limiting tourist volume, maintaining or increasing tax rates, and increasing government investment in infrastructure. These recommendations are based on the model's predictions and sensitivity analysis.
+
+By solving these problems, the paper contributes to the sustainable management of tourism destinations, balancing economic growth with environmental protection and social welfare.
+
+\bibitem{AI4}
+TongYiQianWen-V2.5 \\ 
+Query1: Combine with the content of the document, summarize the highlights of this paper \\  
+Output: 
+Given the requirement to synthesize a highlight that reflects the document's content, here is an enhanced highlight statement:
+
+Highlight:
+This study introduces a robust, adaptable dynamic management model for sustainable tourism, which not only balances economic benefits with environmental conservation and social well-being but also demonstrates practical applicability through its ease of implementation and calibration using local data. The model's flexibility enables tailored solutions for diverse overtourism-affected destinations, ensuring significant co-benefits in both economic performance and environmental sustainability, thereby facilitating widespread adoption and effective policy-making.
+
+This statement aims to capture the essence of the document's contributions while aligning with the clear, impactful format suggested by your reference to the image. However, without access to the specific image you mentioned, this interpretation focuses on synthesizing the key messages from the text provided. If the image contained specific elements or a particular style of presenting highlights, incorporating those directly would offer a more precise match.
 
 \end{ReportAiUse}
 
@@ -705,7 +744,7 @@ Both destinations highlight the urgent need for adaptive management to protect n
     \item \textbf{Strengthen community engagement} by allocating 30\% of tourism revenue to local infrastructure construction, aiming to cut $\text{CO}_\text{2}$ emission by 25\% by 2026.
   \end{enumerate}
 
-  Besides, for the long-term strategic plan, we also recommand deploy IoT sensors across critical glacial zones to track melt rates and implement real-time monitoring, as well as
+  Besides, for the long-term strategic plan, we also recommend deploy IoT sensors across critical glacial zones to track melt rates and implement real-time monitoring, as well as
   developing state-of-the-art algorithm to recalibrate visitor caps dynamically based on real-time environmental data.
 
   After adapting these measures, the annual glacial retreat should be reduced from 1.2 to 0.8 meters by 2026, while the toursim revenue can maintain above \$5.5 milllion annually with
