@@ -74,9 +74,6 @@ keyword1; keyword2
 %
 \section{Introduction}
 \subsection{Problem Background}
-% 有一半多一点的优秀论文这里会放一张没什么信息量的那种图，
-% 因为我们这里包含了旅游业带来的经济增长、环境破坏和居民态度三个部分，
-% 不是很好总结，就先没有放图了
 Juneau, Alaska, a city with approximately 30,000 residents, has witnesseda dramatic boom in the tourism, which reached a peak of 1.6 million passengersin 2023. 
 This influx of vistors has introduced significant economic benefits, generating about \$375 million in revenue for the city. 
 However, it has also brought challenges like overcrowding and environmental concerns.
@@ -113,7 +110,6 @@ Considering the background information and restricted conditions identified in t
     Draft a one-page memo outlining predictions, the effects of various measures, and suggestions for optimizing outcomes.
 \end{itemize}
 
-
 \subsection{Our Work}
 To summary up this artical, we focus on developing a dynamic multi-objective optimization model for the sustainable tourism industry in Juneau, Alaska. 
 This model integrates a three-party game equilibrium framework involving tourists, attractions, and local residents. 
@@ -139,7 +135,6 @@ In order to intuitively reflect our work process, the flow chart is shown in Fig
   \caption{Overall Model Framework}
   \label{Fig.2}
 \end{figure}
-
 
 \section{Assumption and Justification}
 \begin{itemize}
@@ -190,7 +185,18 @@ In order to intuitively reflect our work process, the flow chart is shown in Fig
   \end{threeparttable}
 \end{table}
 
-\section{Data Preparation}
+\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game (DMSTM)}
+
+% The overall structure of the model is shown in Fig.X. 需要架构图
+We take the effect of the number of tourist $V_t$, the quality of environment $E_t$, 
+the retreat of glaciers $G_t$, the stability of society $S$ into consideration , 
+and build a game theory based model\cite{Wang2021}, DMSTM, to achieve the multi-objective optimization.
+DMSTM aims to maxmize the net income from toruism while minizing the carbon footprint,
+garbage generating and glacial recession, as well as keep the pressure on infrastructure within some limits,
+to provide better decision-making advice.
+In order to develop this model, we first need to calibrate the parameters to estimate 
+the independent variables $V_t, E_t, G_t, S$ mentioned above.
+
 \subsection{Data Collection}
 \begin{table}[H]
   \caption{\textbf{Data Websites}} 
@@ -207,19 +213,6 @@ In order to intuitively reflect our work process, the flow chart is shown in Fig
     \bottomrule
   \end{tabular}
 \end{table}
-
-\subsection{Data Preprocessing}
-
-\section{Dynamic Management Model of Sustainable Tourism Based on Tripartite Game (DMSTM)}
-% The overall structure of the model is shown in Fig.X. 需要架构图
-We take the effect of the number of tourist $V_t$, the quality of environment $E_t$, 
-the retreat of glaciers $G_t$, the stability of society $S$ into consideration , 
-and build a game theory based model\cite{Wang2021}, DMSTM, to achieve the multi-objective optimization.
-DMSTM aims to maxmize the net income from toruism while minizing the carbon footprint,
-garbage generating and glacial recession, as well as keep the pressure on infrastructure within some limits,
-to provide better decision-making advice.
-In order to develop this model, we first need to calibrate the parameters to estimate 
-the independent variables $V_t, E_t, G_t, S$ mentioned above.
 
 \subsection{Parameters Calibration}
 
